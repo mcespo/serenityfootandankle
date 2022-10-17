@@ -92,3 +92,9 @@
       </div>
   </div>
 </header>
+
+<section class="navtester">
+@if (has_nav_menu('primary_navigation'))
+  {!! wp_nav_menu($primaryNavigation) !!}
+@endif
+</section>
