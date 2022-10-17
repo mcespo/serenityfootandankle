@@ -63,7 +63,7 @@ if (class_exists('\Walker_Nav_Menu')) {
                  * @param int      $depth   Depth of menu item. Used for padding.
                  */
                 $class_names = join(' ', apply_filters('nav_menu_submenu_css_class', $classes, $args, $depth));
-                $class_names = $class_names ? ' class="' . esc_attr($class_names) . '"' : '';
+                $class_names = $class_names ? ' class="' . esc_attr($class_names) . ' text-gray-500 group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"' : '';
 
                 /*
                 * The `.dropdown-menu` container needs to have a labelledby
@@ -80,7 +80,7 @@ if (class_exists('\Walker_Nav_Menu')) {
                     // Build a string to use as aria-labelledby.
                     $labelledby = 'aria-labelledby="' . esc_attr(end($matches[2])) . '"';
                 }
-                $output .= "{$n}{$indent}<ul$class_names $labelledby role=\"menu\">{$n}";
+                $output .= "<div$class_names $labelledby role=\"menu\">{$n}";
             }
 
             /**
@@ -171,23 +171,19 @@ if (class_exists('\Walker_Nav_Menu')) {
                  */
                 $id = apply_filters('nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args, $depth);
                 $id = $id ? ' id="' . esc_attr($id) . '"' : '';
-
-                $output .= $indent . '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"' . $id . $class_names . '>';
-
                 // Initialize array for holding the $atts for the link item.
                 $atts = array();
 
                 $atts['title'] = !empty($item->attr_title) ? $item->attr_title : '';
                 $atts['target'] = !empty($item->target) ? $item->target : '';
                 $atts['rel']    = !empty($item->xfn) ? $item->xfn : '';
-                // If the item has children, add atts to the <a>.
+                // If the item has children, add atts to the element.
                 if (isset($args->has_children) && $args->has_children && 0 === $depth && $args->depth > 1) {
-                    $atts['href']          = '#';
                     $atts['data-href']     = $item->url;
                     $atts['data-bs-toggle']   = 'dropdown';
                     $atts['aria-haspopup'] = 'true';
                     $atts['aria-expanded'] = 'false';
-                    $atts['class']         = 'dropdown-toggle nav-link';
+                    $atts['class']         = 'dropdown-toggle nav-link text-gray-500 group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2';
                     $atts['id']            = 'menu-item-dropdown-' . $item->ID;
                 } else {
                     $atts['href'] = !empty($item->url) ? $item->url : '#';
@@ -196,7 +192,7 @@ if (class_exists('\Walker_Nav_Menu')) {
                         $atts['class'] = 'dropdown-item';
                         $atts['role'] = 'menuitem';
                     } else {
-                        $atts['class'] = 'nav-link';
+                        $atts['class'] = 'text-base font-medium text-gray-500 hover:text-gray-900';
                     }
                 }
 
@@ -226,7 +222,9 @@ if (class_exists('\Walker_Nav_Menu')) {
                 * This is the start of the internal nav item. Depending on what
                 * kind of linkmod we have we may need different wrapper elements.
                 */
-                if ('' !== $linkmod_type) {
+                if (isset($args->has_children) && $args->has_children && 0 === $depth && $args->depth > 1) {
+                    $item_output .= '<div class="relative"><button' . $attributes . '>';
+                } else if ('' !== $linkmod_type) {
                     // Is linkmod, output the required element opener.
                     $item_output .= self::linkmod_element_open($linkmod_type, $attributes);
                 } else {
