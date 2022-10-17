@@ -1,4 +1,5 @@
-import {domReady} from '@roots/sage/client';
+import { domReady } from '@roots/sage/client';
+import Alpine from "alpinejs";
 
 /**
  * app.main
@@ -9,6 +10,8 @@ const main = async (err) => {
     console.error(err);
   }
 
+  window.Alpine = Alpine
+  Alpine.start()
   // application code
 };
 
