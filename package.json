@@ -23,6 +23,7 @@
     "@roots/sage": "6.4.5"
   },
   "dependencies": {
-    "alpinejs": "^3.10.4"
+    "alpinejs": "^3.10.4",
+    "caniuse-lite": "^1.0.30001425"
   }
 }
