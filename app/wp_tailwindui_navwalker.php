@@ -63,7 +63,7 @@ if (class_exists('\Walker_Nav_Menu')) {
                  * @param int      $depth   Depth of menu item. Used for padding.
                  */
                 $class_names = join(' ', apply_filters('nav_menu_submenu_css_class', $classes, $args, $depth));
-                $class_names = $class_names ? ' class="' . esc_attr($class_names) . ' text-gray-500 group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"' : '';
+                $class_names = $class_names ? ' class="' . esc_attr($class_names) . ' absolute inset-x-0 top-full z-10 hidden transform shadow-lg md:block" x-ref="panel" x-show="open" x-transition.origin.top.left x-on:click.outside="close($refs.button)" :id="$id(\'dropdown-button\')" style="display: none;"' : '';
 
                 /*
                 * The `.dropdown-menu` container needs to have a labelledby
@@ -80,7 +80,14 @@ if (class_exists('\Walker_Nav_Menu')) {
                     // Build a string to use as aria-labelledby.
                     $labelledby = 'aria-labelledby="' . esc_attr(end($matches[2])) . '"';
                 }
-                $output .= "<div$class_names $labelledby role=\"menu\">{$n}";
+
+                $output .= "</span>
+                            <svg class=\"text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">
+                                <path fill-rule=\"evenodd\" d=\"M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z\" clip-rule=\"evenodd\"></path>
+                            </svg>
+                            </button>
+                            <div$class_names $labelledby role=\"menu\">{$n}"
+                ;
             }
 
             /**
@@ -223,7 +230,21 @@ if (class_exists('\Walker_Nav_Menu')) {
                 * kind of linkmod we have we may need different wrapper elements.
                 */
                 if (isset($args->has_children) && $args->has_children && 0 === $depth && $args->depth > 1) {
-                    $item_output .= '<div class="relative"><button' . $attributes . '>';
+                    $item_output .= '<div class="relative" x-data="{
+                                         open: false, toggle() { if (this.open) { return this.close() }
+                                         this.$refs.button.focus()
+                                         this.open = true
+                                     },
+                                      close(focusAfter) {
+                                         if (! this.open) return
+                                            this.open = false
+
+                                            focusAfter && focusAfter.focus()
+                                            }
+                                      }"
+                                        x-on:keydown.escape.prevent.stop="close($refs.button)"
+                                        x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
+                                        x-id="[\'dropdown-button\']"><button x-ref="button" x-on:click="toggle()" :aria-expanded="open" :aria-controls="$id(\'dropdown-button\')" type="button"' . $attributes . '><span>';
                 } else if ('' !== $linkmod_type) {
                     // Is linkmod, output the required element opener.
                     $item_output .= self::linkmod_element_open($linkmod_type, $attributes);
