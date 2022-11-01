@@ -42,12 +42,24 @@ class App extends Composer
      * Primary Nav Menu arguments
      * @return array
      */
+    public function primarySmallNavigation()
+    {
+        $args = array(
+            'theme_location' => 'primary_navigation',
+            'menu_class' => 'space-y-1 px-2 pt-2 pb-3',
+            'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+            'depth' => 4,
+            'fallback_cb' => 'tailwind_navwalker::fallback',
+            'walker' => new \Tailwind_Navwalker()
+        );
+        return $args;
+    }
     public function primaryNavigation()
     {
         $args = array(
             'theme_location' => 'primary_navigation',
-            'menu_class' => 'hidden space-x-10 md:flex',
-            'items_wrap' => '<div id="%1$s" class="%2$s">%3$s</div>',
+            'menu_class' => 'space-y-1 px-2 pt-2 pb-3',
+            'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
             'depth' => 4,
             'fallback_cb' => 'tailwind_navwalker::fallback',
             'walker' => new \Tailwind_Navwalker()

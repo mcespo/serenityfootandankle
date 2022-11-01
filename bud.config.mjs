@@ -29,12 +29,12 @@ export default async (app) => {
     /**
      * Proxy origin (`WP_HOME`)
      */
-    .proxy("http://serenity.test")
+    .proxy("http://localhost:10005/")
 
     /**
      * Development origin
      */
-    .serve("http://localhost:10005/")
+    .serve("http://localhost:5000/")
 
     /**
      * URI of the `public` directory
