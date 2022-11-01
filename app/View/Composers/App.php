@@ -47,10 +47,10 @@ class App extends Composer
         $args = array(
             'theme_location' => 'primary_navigation',
             'menu_class' => 'hidden space-x-10 md:flex',
-            'items_wrap' => '<nav id="%1$s" class="%2$s">%3$s</div>',
+            'items_wrap' => '<div id="%1$s" class="%2$s">%3$s</div>',
             'depth' => 4,
-            'fallback_cb' => 'wp_tailwind_navwalker::fallback',
-            'walker' => new \App\wp_tailwindui_navwalker()
+            'fallback_cb' => 'tailwind_navwalker::fallback',
+            'walker' => new \Tailwind_Navwalker()
         );
         return $args;
     }
