@@ -4,23 +4,8 @@ tabs:
     display: Main
     sections:
       -
-        display: Hero
+        display: 'Hero Section'
         fields:
-          -
-            handle: title
-            field:
-              type: text
-              required: true
-              validate:
-                - required
-              display: 'Page Title'
-              instructions_position: above
-              listable: hidden
-              visibility: visible
-              replicator_preview: true
-              input_type: text
-              antlers: false
-              hide_display: false
           -
             handle: hero_heading
             field:
@@ -81,8 +66,24 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+          -
+            handle: hero_image
+            field:
+              use_breakpoints: false
+              allow_ratio: false
+              allow_fit: false
+              restrict: false
+              allow_uploads: true
+              type: responsive
+              display: 'Hero Image'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              duplicate: false
+              hide_display: false
       -
-        display: Content
+        display: 'Content Section'
         fields:
           -
             handle: content
@@ -124,11 +125,36 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+          -
+            handle: video_link
+            field:
+              type: video
+              display: 'Video Link'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
   sidebar:
     display: Sidebar
     sections:
       -
         fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+              display: 'Page Title'
+              instructions_position: above
+              listable: hidden
+              visibility: visible
+              replicator_preview: true
+              input_type: text
+              antlers: false
+              hide_display: false
           -
             handle: slug
             field:

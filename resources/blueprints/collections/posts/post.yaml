@@ -1,4 +1,4 @@
-title: Page
+title: Post
 tabs:
   main:
     display: Main
@@ -98,12 +98,3 @@ tabs:
               type: slug
               localizable: true
               validate: 'max:200'
-          -
-            handle: parent
-            field:
-              type: entries
-              collections:
-                - pages
-              max_items: 1
-              listable: false
-              localizable: true
