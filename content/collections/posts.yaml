@@ -1,6 +1,5 @@
 title: Posts
 template: default
-layout: layout
 revisions: false
 route: '/posts/{year}/{month}/{slug}'
 date: true

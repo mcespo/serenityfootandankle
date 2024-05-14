@@ -1,0 +1,33 @@
+title: 'Business Information'
+data:
+  hours:
+    -
+      cells:
+        - Monday
+        - '9 AM – 5 PM'
+    -
+      cells:
+        - Tuesday
+        - '9 AM – 4 PM'
+    -
+      cells:
+        - Wednesday
+        - '4 PM – 7 PM'
+    -
+      cells:
+        - Thursday
+        - '9 AM – 4 PM'
+    -
+      cells:
+        - Friday
+        - '9 AM – 4 PM'
+    -
+      cells:
+        - Saturday
+        - Closed
+    -
+      cells:
+        - Sunday
+        - Closed
+  address: '767 Park Ave West Suite #180 Highland Park, IL 60035'
+  phone_number: '+1 (847) 380-3700'
