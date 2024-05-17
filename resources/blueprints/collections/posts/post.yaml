@@ -98,3 +98,32 @@ tabs:
               type: slug
               localizable: true
               validate: 'max:200'
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required
+          -
+            handle: featured_image
+            field:
+              use_breakpoints: false
+              allow_ratio: false
+              allow_fit: true
+              breakpoints:
+                - sm
+                - md
+                - lg
+                - xl
+                - 2xl
+              restrict: false
+              allow_uploads: true
+              type: responsive
+              display: 'Featured Image'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
