@@ -1,5 +1,7 @@
 title: Posts
 template: default
+taxonomies:
+  - tags
 revisions: false
 route: '/posts/{year}/{month}/{slug}'
 date: true
