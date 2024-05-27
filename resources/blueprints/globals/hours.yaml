@@ -3,6 +3,48 @@ tabs:
     display: Main
     sections:
       -
+        display: Address
+        fields:
+          -
+            handle: address_single
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Address (Single Line)'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              default: '767 Park Ave West Suite #180 Highland Park, IL 60035'
+          -
+            handle: phone
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Phone Number'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: address
+            field:
+              default: |-
+                767 Park Ave West Suite #180
+                Highland Park, IL 60035
+              antlers: false
+              type: textarea
+              display: Address
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+      -
         display: 'Hours of Operation'
         fields:
           -
@@ -10,33 +52,6 @@ tabs:
             field:
               type: table
               display: Hours
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-      -
-        display: Address
-        fields:
-          -
-            handle: address
-            field:
-              input_type: text
-              antlers: false
-              type: text
-              display: Address
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-          -
-            handle: phone_number
-            field:
-              input_type: text
-              antlers: false
-              type: text
-              display: 'Phone Number'
               listable: hidden
               instructions_position: above
               visibility: visible

@@ -1,4 +1,4 @@
-title: Page Template
+title: 'Page Template'
 tabs:
   main:
     display: Main
@@ -27,7 +27,6 @@ tabs:
                 - anchor
                 - quote
                 - table
-                - codeblock
                 - removeformat
               smart_typography: false
               save_html: false
@@ -40,7 +39,7 @@ tabs:
               enable_input_rules: true
               enable_paste_rules: true
               remove_empty_nodes: false
-              antlers: false
+              antlers: true
               link_noopener: false
               link_noreferrer: false
               target_blank: false

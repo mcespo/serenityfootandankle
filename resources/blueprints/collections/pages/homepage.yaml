@@ -1,4 +1,4 @@
-title: Homepage Template
+title: 'Homepage Template'
 tabs:
   main:
     display: Main
@@ -111,7 +111,7 @@ tabs:
               enable_input_rules: true
               enable_paste_rules: true
               remove_empty_nodes: false
-              antlers: false
+              antlers: true
               link_noopener: false
               link_noreferrer: false
               target_blank: false
