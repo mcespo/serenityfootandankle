@@ -1,0 +1,19 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: text_field
+            field:
+              input_type: tel
+              default: '(847) 380-3700'
+              antlers: false
+              type: text
+              display: 'Text Field'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
