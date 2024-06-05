@@ -1,8 +1,8 @@
 title: Business
 data:
   address_single: '767 Park Ave West Suite #180 Highland Park, IL 60035'
-  phone_number: '<a href="tel:+18473803700">(847) 380-3700</a>'
+  phone: '<a href="tel:+18473803700">(847) 380-3700</a>'
+  email: '<a href="mailto:Dr.Ibrahim@serenityfootandankle.com">Dr.Ibrahim@serenityfootandankle.com</a>'
   address: |-
     767 Park Ave West Suite #180
     Highland Park, IL 60035
-  link_field: '<a href="tel:+18473803700">(847) 380-3700</a>'

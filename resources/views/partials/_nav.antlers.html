@@ -1,11 +1,11 @@
-<nav x-data="{ mobileMenuToggle: false }" class="sticky top-0 z-20 bg-white shadow">
+<nav x-data="{ mobileMenuToggle: false }" class="sticky top-0 z-20 bg-inherit shadow">
     <div class="mx-auto my-3 max-w-7xl px-2 sm:px-4 lg:px-8">
         <div class="flex h-16 justify-between">
             <div class="flex items-center px-2 lg:px-0">
                 <a href="/" class="flex flex-shrink-0 items-center">
-                    {{ svg src="logo_sids_icon" class="h-14 w-auto" }}</a>
+                    {{ svg src="img/serenity-foot-and-ankle-logo" class="h-14 w-auto" }}</a>
                 <div class="hidden h-min items-baseline lg:ml-6 lg:flex lg:space-x-8">
-                    {{ nav:collection:pages include_home="true" max_depth="3" }} {{ unless
+                    {{ nav:main_nav include_home="true" max_depth="3" }} {{ unless
                     children }} {{ if remove_from_navigation == false }}
                     <a href="{{ url }}"
                         class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium {{ is_current ? 'border-blue-sids text-gray-900 hover:border-indigo-500' : 'border-transparent hover:border-gray-300 hover:text-gray-700' }}">
@@ -18,7 +18,7 @@
                         <button x-on:click="{{ slug | camelize }} = !{{ slug | camelize }}" type="button"
                             class="group inline-flex items-center rounded-md bg-white text-base font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                             aria-expanded="false">
-                            <span>{{ title }}</span>
+                            <span>All {{ title }}</span>
                             <svg class="ml-2 h-5 w-5 text-gray-400 group-hover:text-gray-500"
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
                                 aria-hidden="true">
@@ -41,13 +41,9 @@
                             </div>
                         </div>
                     </div>
-                    {{ /unless }} {{ /nav:collection:pages }}
+                    {{ /unless }} {{ /nav:main_nav }}
                 </div>
             </div>
-            <a href="/donate"
-                class="inline-flex h-min items-center self-center rounded-md border border-transparent bg-blue-sids px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-                Donate Now
-            </a>
             <div class="flex items-center lg:hidden">
                 <button x-on:click="mobileMenuToggle = !mobileMenuToggle" type="button"
                     class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
@@ -71,7 +67,7 @@
     <!-- Mobile menu, show/hide based on menu state. -->
     <div class="lg:hidden" id="mobile-menu">
         <div x-show="mobileMenuToggle" class="space-y-1 pb-3 pt-2">
-            {{ nav:collection:pages include_home="true" max_depth="3" }}
+            {{ nav:main_nav include_home="true" max_depth="3" }}
                 {{ unless children }}
                     {{ if remove_from_navigation == false }}
                     <a href="{{ url }}"
@@ -84,7 +80,7 @@
                         <button x-on:click="{{ slug | camelize }} = !{{ slug | camelize }}" type="button"
                             class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50"
                             aria-controls="disclosure-1" aria-expanded="false">
-                            {{ title }}
+                            All {{ title }}
                             <!--
                                     Expand/collapse icon, toggle classes based on menu open state.
 
@@ -105,7 +101,7 @@
                         </div>
                     </div>
                 {{ /unless }}
-            {{ /nav:collection:pages }}
+            {{ /nav:main_nav }}
         </div>
     </div>
 </nav>

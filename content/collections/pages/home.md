@@ -5,12 +5,14 @@ title: Home
 template: home
 author: 06b22383-0ba2-4c31-a8de-ab3b25c4bf61
 updated_by: 06b22383-0ba2-4c31-a8de-ab3b25c4bf61
-updated_at: 1716789556
+updated_at: 1717561053
 hero_heading: heading
 hero_subheading: subheading
 hero_link:
   hero_cta_link: 'entry::2bf4d814-1b03-482c-b4a4-6e45545a8a90'
   hero_cta_text: 'Book appointment'
+hero_image:
+  src: pages/run-at-serenity.jpg
 content:
   -
     type: heading
