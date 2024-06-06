@@ -1,7 +1,6 @@
 title: Tags
 preview_targets:
-  -
-    label: Term
-    url: '{permalink}'
+  - label: Term
+    url: "{permalink}"
     refresh: true
 layout: layout

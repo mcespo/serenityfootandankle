@@ -2,36 +2,32 @@ tabs:
   main:
     display: Main
     sections:
-      -
-        display: Address
+      - display: Address
         fields:
-          -
-            handle: address_single
+          - handle: address_single
             field:
               input_type: text
               antlers: false
               type: text
-              display: 'Address (Single Line)'
+              display: "Address (Single Line)"
               listable: hidden
               instructions_position: above
               visibility: visible
               replicator_preview: true
               hide_display: false
-              default: '767 Park Ave West Suite #180 Highland Park, IL 60035'
-          -
-            handle: phone
+              default: "767 Park Ave West Suite #180 Highland Park, IL 60035"
+          - handle: phone
             field:
               input_type: text
               antlers: false
               type: text
-              display: 'Phone Number'
+              display: "Phone Number"
               listable: hidden
               instructions_position: above
               visibility: visible
               replicator_preview: true
               hide_display: false
-          -
-            handle: address
+          - handle: address
             field:
               default: |-
                 767 Park Ave West Suite #180
@@ -44,11 +40,9 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
-      -
-        display: 'Hours of Operation'
+      - display: "Hours of Operation"
         fields:
-          -
-            handle: hours
+          - handle: hours
             field:
               type: table
               display: Hours

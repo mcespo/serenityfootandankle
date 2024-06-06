@@ -3,10 +3,8 @@ tabs:
   main:
     display: Main
     sections:
-      -
-        fields:
-          -
-            handle: content
+      - fields:
+          - handle: content
             field:
               type: bard
               display: Content
@@ -52,23 +50,19 @@ tabs:
   sidebar:
     display: Sidebar
     sections:
-      -
-        fields:
-          -
-            handle: title
+      - fields:
+          - handle: title
             field:
               type: text
               required: true
               validate:
                 - required
-          -
-            handle: slug
+          - handle: slug
             field:
               type: slug
               localizable: true
-              validate: 'max:200'
-          -
-            handle: parent
+              validate: "max:200"
+          - handle: parent
             field:
               type: entries
               collections:

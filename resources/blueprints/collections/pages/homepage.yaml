@@ -1,57 +1,51 @@
-title: 'Homepage Template'
+title: "Homepage Template"
 tabs:
   main:
     display: Main
     sections:
-      -
-        display: 'Hero Section'
+      - display: "Hero Section"
         fields:
-          -
-            handle: hero_heading
+          - handle: hero_heading
             field:
               input_type: text
               antlers: false
               type: text
-              display: 'Hero Heading'
+              display: "Hero Heading"
               listable: hidden
               instructions_position: above
               visibility: visible
               replicator_preview: true
               hide_display: false
-          -
-            handle: hero_subheading
+          - handle: hero_subheading
             field:
               input_type: text
               antlers: false
               type: text
-              display: 'Hero Subheading'
+              display: "Hero Subheading"
               listable: hidden
               instructions_position: above
               visibility: visible
               replicator_preview: true
               hide_display: false
-          -
-            handle: hero_link
+          - handle: hero_link
             field:
               fields:
-                -
-                  handle: hero_cta_link
+                - handle: hero_cta_link
                   field:
                     type: link
-                    display: 'Hero CTA Link'
+                    display: "Hero CTA Link"
                     width: 50
                     listable: hidden
                     instructions_position: above
                     visibility: visible
                     replicator_preview: true
                     hide_display: false
-                -
-                  handle: hero_cta_text
+                - handle: hero_cta_text
                   field:
                     input_type: text
                     antlers: false
                     type: text
-                    display: 'Hero CTA Text'
+                    display: "Hero CTA Text"
                     width: 50
                     listable: hidden
                     instructions_position: above
@@ -60,14 +54,13 @@ tabs:
                     hide_display: false
               fullscreen: true
               type: group
-              display: 'Hero Link'
+              display: "Hero Link"
               listable: hidden
               instructions_position: above
               visibility: visible
               replicator_preview: true
               hide_display: false
-          -
-            handle: hero_image
+          - handle: hero_image
             field:
               use_breakpoints: false
               allow_ratio: false
@@ -75,18 +68,16 @@ tabs:
               restrict: false
               allow_uploads: true
               type: responsive
-              display: 'Hero Image'
+              display: "Hero Image"
               listable: hidden
               instructions_position: above
               visibility: visible
               replicator_preview: true
               duplicate: false
               hide_display: false
-      -
-        display: 'Content Section'
+      - display: "Content Section"
         fields:
-          -
-            handle: content
+          - handle: content
             field:
               buttons:
                 - h2
@@ -125,11 +116,10 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
-          -
-            handle: video_link
+          - handle: video_link
             field:
               type: video
-              display: 'Video Link'
+              display: "Video Link"
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -138,16 +128,14 @@ tabs:
   sidebar:
     display: Sidebar
     sections:
-      -
-        fields:
-          -
-            handle: title
+      - fields:
+          - handle: title
             field:
               type: text
               required: true
               validate:
                 - required
-              display: 'Page Title'
+              display: "Page Title"
               instructions_position: above
               listable: hidden
               visibility: visible
@@ -155,14 +143,12 @@ tabs:
               input_type: text
               antlers: false
               hide_display: false
-          -
-            handle: slug
+          - handle: slug
             field:
               type: slug
               localizable: true
-              validate: 'max:200'
-          -
-            handle: parent
+              validate: "max:200"
+          - handle: parent
             field:
               type: entries
               collections:

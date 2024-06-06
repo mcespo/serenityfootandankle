@@ -3,10 +3,8 @@ tabs:
   main:
     display: Main
     sections:
-      -
-        fields:
-          -
-            handle: content
+      - fields:
+          - handle: content
             field:
               type: bard
               display: Content
@@ -49,19 +47,17 @@ tabs:
               previews: true
               hide_display: false
               container: assets
-          -
-            handle: video_link
+          - handle: video_link
             field:
               type: video
-              display: 'Video Link'
+              display: "Video Link"
               width: 75
               listable: hidden
               instructions_position: above
               visibility: visible
               replicator_preview: true
               hide_display: false
-          -
-            handle: video_placement
+          - handle: video_placement
             field:
               options:
                 Top: Top
@@ -73,7 +69,7 @@ tabs:
               searchable: false
               cast_booleans: false
               type: select
-              display: 'Video Placement'
+              display: "Video Placement"
               width: 25
               listable: hidden
               instructions_position: above
@@ -83,31 +79,26 @@ tabs:
   sidebar:
     display: Sidebar
     sections:
-      -
-        fields:
-          -
-            handle: title
+      - fields:
+          - handle: title
             field:
               type: text
               required: true
               validate:
                 - required
-          -
-            handle: slug
+          - handle: slug
             field:
               type: slug
               localizable: true
-              validate: 'max:200'
-          -
-            handle: date
+              validate: "max:200"
+          - handle: date
             field:
               type: date
               required: true
               default: now
               validate:
                 - required
-          -
-            handle: featured_image
+          - handle: featured_image
             field:
               use_breakpoints: false
               allow_ratio: false
@@ -121,7 +112,7 @@ tabs:
               restrict: false
               allow_uploads: true
               type: responsive
-              display: 'Featured Image'
+              display: "Featured Image"
               listable: hidden
               instructions_position: above
               visibility: visible
