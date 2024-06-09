@@ -11,10 +11,6 @@ tabs:
               type: bard
               display: Content
               localizable: true
-              instructions_position: above
-              listable: hidden
-              visibility: visible
-              replicator_preview: true
               buttons:
                 - h2
                 - h3
@@ -29,25 +25,8 @@ tabs:
                 - table
                 - codeblock
                 - removeformat
-              smart_typography: false
-              save_html: false
-              inline: false
-              toolbar_mode: fixed
-              reading_time: false
-              word_count: false
-              fullscreen: true
-              allow_source: true
-              enable_input_rules: true
-              enable_paste_rules: true
               remove_empty_nodes: false
               antlers: true
-              link_noopener: false
-              link_noreferrer: false
-              target_blank: false
-              always_show_set_button: false
-              collapse: false
-              previews: true
-              hide_display: false
               container: assets
           -
             handle: video_link
@@ -55,31 +34,16 @@ tabs:
               type: video
               display: 'Video Link'
               width: 75
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
           -
             handle: video_placement
             field:
               options:
                 Top: Top
                 Bottom: Bottom
-              taggable: false
-              push_tags: false
-              multiple: false
-              clearable: false
               searchable: false
-              cast_booleans: false
               type: select
               display: 'Video Placement'
               width: 25
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
   sidebar:
     display: Sidebar
     sections:
@@ -107,27 +71,19 @@ tabs:
               validate:
                 - required
           -
-            handle: featured_image
+            handle: image
             field:
               use_breakpoints: false
-              allow_ratio: false
-              allow_fit: true
+              allow_fit: false
               breakpoints:
                 - sm
                 - md
                 - lg
-                - xl
-                - 2xl
-              restrict: false
-              allow_uploads: true
-              type: responsive
               display: 'Featured Image'
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
+              instructions: 'Choose image using art direction.'
+              type: responsive
               container: assets
+              restrict: true
               folder: posts
           -
             handle: tags
@@ -137,3 +93,27 @@ tabs:
                 - tags
               display: Tags
               mode: select
+  alt_password_protect:
+    display: 'Alt Password Protect'
+    sections:
+      -
+        fields:
+          -
+            handle: protect
+            field:
+              options:
+                none: None
+                alt_password_protect_default: 'Default Password'
+                alt_password_protect_custom: 'Custom Password'
+              max_items: 1
+              default: none
+              type: select
+              display: 'Password Protect'
+              instructions: 'Default password set in site settings'
+          -
+            handle: alt_protect_custom_password
+            field:
+              type: text
+              display: 'Custom Password'
+              if:
+                protect: 'equals alt_password_protect_custom'
