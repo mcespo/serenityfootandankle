@@ -1,6 +1,13 @@
+---
+nav_classes:
+  1: '1 pl-4 text-pink-400'
+  2: '2 pl-4 '
+  3: '3 pl-6 '
+---
+
 <nav
     x-data="{ mobileMenuToggle: false }"
-    class="sticky top-0 z-20 bg-inherit shadow"
+    class="sticky top-0 z-30 bg-inherit shadow"
 >
     <div class="mx-auto my-3 max-w-7xl px-2 sm:px-4 lg:px-8">
         <div class="flex h-16 justify-between">
@@ -8,7 +15,8 @@
                 <h1 class="sr-only">Serenity foot and Ankle</h1>
                 <a href="/" class="flex flex-shrink-0 items-center"
                     >{{ svg src="img/serenity-foot-and-ankle-logo" class="h-14
-                    w-auto" }}</a
+                    w-auto" }}
+                </a
                 >
                 <div
                     class="hidden h-min items-baseline lg:ml-6 lg:flex lg:space-x-8"
@@ -17,7 +25,7 @@
                     unless children }} {{ if remove_from_navigation == false }}
                     <a
                         href="{{ url }}"
-                        class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium {{ is_current ? 'border-blue-sids text-gray-900 hover:border-indigo-500' : 'border-transparent hover:border-gray-300 hover:text-gray-700' }}"
+                        class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium {{ is_current ? 'border-gray-700 text-gray-900' : 'border-transparent hover:border-teal-serenity' }}"
                     >
                         <p class="text-base font-medium text-gray-900">
                             {{ title }}
@@ -53,10 +61,10 @@
                             x-cloak
                             x-show="{{ slug | camelize }}"
                             @click.outside="{{ slug | camelize }} = false"
-                            class="absolute z-10 -ml-4 mt-3 w-screen max-w-md transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2"
+                            class="absolute z-30 -ml-4 mt-3 w-screen max-w-sm transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2"
                         >
                             <div
-                                class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5"
+                                class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5"
                             >
                                 <div
                                     class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8"
@@ -123,56 +131,32 @@
         </div>
     </div>
 
+
+
     <!-- Mobile menu, show/hide based on menu state. -->
     <div class="lg:hidden" id="mobile-menu">
         <div x-show="mobileMenuToggle" class="space-y-1 pb-3 pt-2">
-            {{ nav:main_nav include_home="true" max_depth="3" }} {{ unless
-            children }} {{ if remove_from_navigation == false }}
-            <a
-                href="{{ url }}"
-                class="block pl-3 pr-3.5 py-2 text-base font-semibold leading-7 {{ is_current ? 'bg-indigo-50 border-indigo-500 text-indigo-700' : 'border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800' }}"
-            >
-                {{ title }}
-            </a>
-            {{ /if }} {{ else }}
-            <div x-data="{ {{ slug | camelize }}: false }">
-                <button
-                    x-on:click="{{ slug | camelize }} = !{{ slug | camelize }}"
-                    type="button"
-                    class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50"
-                    aria-controls="disclosure-1"
-                    aria-expanded="false"
-                >
-                    All {{ title }}
-                    <!-- Expand/collapse icon, toggle classes based on menu open state. Open: "rotate-180", Closed: "" -->
-                    <svg
-                        class="h-5 w-5 flex-none"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                    >
-                        <path
-                            fill-rule="evenodd"
-                            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                            clip-rule="evenodd"
-                        />
-                    </svg>
-                </button>
-                <div
-                    class="mt-2 space-y-2"
-                    id="disclosure-1"
-                    x-cloak
-                    x-show="{{ slug | camelize }}"
-                >
-                    <a
-                        href="{{ url }}"
-                        class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                        >{{ title }}</a
-                    >
-                    {{ *recursive children* }}
-                </div>
-            </div>
-            {{ /unless }} {{ /nav:main_nav }}
+            {{ nav:main_nav include_home="true" max_depth="3" }}
+                {{ unless children }}
+                    {{ if remove_from_navigation == false }}
+                        <a href="{{ url }}" class="{{ view:nav_classes[depth] }} text-sm uppercase block pr-3.5 py-2 font-bold leading-7 {{ is_current ? 'bg-indigo-50 border-teal-serenity text-indigo-700' : 'border-transparent hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800' }}">
+                            {{ title }}
+                        </a>
+                    {{ /if }}
+                {{ else }}
+                    <div x-data="{ {{ slug | camelize }}: false }">
+                        <button x-on:click="{{ slug | camelize }} = !{{ slug | camelize }}" type="button" class="{{ view:nav_classes[depth] }} text-sm uppercase flex w-full items-center justify-between py-2 pr-3.5 font-semibold leading-7 hover:bg-gray-50" aria-controls="disclosure-1" aria-expanded="false">
+                            All {{ title }}
+                            <!-- Expand/collapse icon, toggle classes based on menu open state. Open: "rotate-180", Closed: "" -->
+                            <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+                        </button>
+                        <div class="space-y-2 bg-gray-200" id="disclosure-1" x-cloak x-show="{{ slug | camelize }}">
+                            <a href="{{ url }}" class="pl-4 block py-2 pr-3 font-semibold leading-7 text-gray-900 hover:bg-gray-50">{{ title }}</a>
+                            {{ *recursive children* }}
+                        </div>
+                    </div>
+                {{ /unless }}
+            {{ /nav:main_nav }}
         </div>
     </div>
 </nav>

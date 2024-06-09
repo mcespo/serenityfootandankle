@@ -1,4 +1,5 @@
-/** @type {import('tailwindcss').Config} */
+/** @type {Plugin} */
+const plugin = require("tailwindcss/plugin");
 export default {
     content: [
         "./resources/**/*.antlers.html",
@@ -7,10 +8,29 @@ export default {
         "./resources/**/*.vue",
         "./content/**/*.md",
     ],
-
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                blue: {
+                    serenity: "#2D588A",
+                },
+                teal: {
+                    serenity: "#2d868a",
+                },
+            },
+        },
     },
-
-    plugins: [require("@tailwindcss/typography")],
+    plugins: [
+        require("@tailwindcss/typography"),
+        plugin(function ({ matchUtilities, theme }) {
+            matchUtilities(
+                {
+                    "grid-area": (value) => ({
+                        gridArea: value,
+                    }),
+                },
+                { values: theme("gridArea") },
+            );
+        }),
+    ],
 };

@@ -1,4 +1,4 @@
-name: "Marvin Cespedes"
+name: 'Marvin Cespedes'
 super: true
 id: 06b22383-0ba2-4c31-a8de-ab3b25c4bf61
 password_hash: $2y$10$/KKodNju6yHLhtSET4Dau.j5HONjuLDW89/wWcS4zSZtFDRA3UhtG
@@ -8,3 +8,8 @@ preferences:
       after_save: continue_editing
     posts:
       after_save: continue_editing
+      columns:
+        - title
+        - slug
+        - date
+        - status

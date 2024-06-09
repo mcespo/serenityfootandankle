@@ -1,10 +1,12 @@
-title: Contact Template
+title: 'Contact Template'
 tabs:
   main:
     display: Main
     sections:
-      - fields:
-          - handle: content
+      -
+        fields:
+          -
+            handle: content
             field:
               buttons:
                 - h2
@@ -29,7 +31,7 @@ tabs:
               enable_input_rules: true
               enable_paste_rules: true
               remove_empty_nodes: false
-              antlers: false
+              antlers: true
               link_noopener: false
               link_noreferrer: false
               target_blank: false
@@ -43,23 +45,25 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
-          - handle: repeater
+          -
+            handle: repeater
             field:
               collapse: false
               previews: true
               fullscreen: true
               sets:
                 new_set_group:
-                  display: "New Set Group"
+                  display: 'New Set Group'
                   instructions: null
                   icon: null
                   sets:
                     new_set:
-                      display: "New Set"
+                      display: 'New Set'
                       instructions: null
                       icon: null
                       fields:
-                        - handle: image
+                        -
+                          handle: image
                           field:
                             use_breakpoints: false
                             allow_ratio: false
@@ -88,7 +92,8 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
-          - handle: map_url
+          -
+            handle: map_url
             field:
               theme: material
               mode: htmlmixed
@@ -100,7 +105,7 @@ tabs:
               line_wrapping: true
               antlers: false
               type: code
-              display: "Map URL"
+              display: 'Map URL'
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -109,19 +114,23 @@ tabs:
   sidebar:
     display: Sidebar
     sections:
-      - fields:
-          - handle: title
+      -
+        fields:
+          -
+            handle: title
             field:
               type: text
               required: true
               validate:
                 - required
-          - handle: slug
+          -
+            handle: slug
             field:
               type: slug
               localizable: true
-              validate: "max:200"
-          - handle: parent
+              validate: 'max:200'
+          -
+            handle: parent
             field:
               type: entries
               collections:
