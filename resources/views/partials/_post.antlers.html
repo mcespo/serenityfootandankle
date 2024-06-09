@@ -2,9 +2,9 @@
     <div
         class="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0"
     >
-        {{ responsive:featured_image quality:webp="50" md:quality:webp="75"
-        lg:quality:webp="100" class="absolute inset-0 h-full w-full rounded-2xl
-        bg-gray-50 object-cover" }}
+        <img src="{{ image:src }}" class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover">
+
+{{#             {{ responsive:image quality:webp="50" md:quality:webp="75" class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover" }} #}}
         <div
             class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"
         ></div>
