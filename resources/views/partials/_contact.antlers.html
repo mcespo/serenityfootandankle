@@ -57,7 +57,9 @@
                     class="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden grid gap-6"
                 >
                     {{ repeater }}
-                        {{ responsive:image quality:webp="50" md:quality:webp="75" md:quality:webp="75" }}
+                        {{ unless image:src == '' }}
+                            {{ responsive:image quality:webp="50" md:quality:webp="75" md:quality:webp="75" }}
+                        {{ /unless }}
                    {{ /repeater }}
                 </aside>
             </div>
