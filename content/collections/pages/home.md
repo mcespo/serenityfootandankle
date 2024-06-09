@@ -5,7 +5,7 @@ title: Home
 template: home
 author: 06b22383-0ba2-4c31-a8de-ab3b25c4bf61
 updated_by: 06b22383-0ba2-4c31-a8de-ab3b25c4bf61
-updated_at: 1717728244
+updated_at: 1717958483
 hero_heading: heading
 hero_subheading: subheading
 hero_link:
@@ -13,7 +13,7 @@ hero_link:
   hero_cta_text: 'Book appointment'
 hero_image:
   src: pages/run-at-serenity.jpg
-video_link: 'https://serenityfootandankle.test/assets/pages/welcome-to-serenity-foot-ankle.mp4'
+video_link: /assets/pages/welcome-to-serenity-foot-and-ankle-specialists.mp4
 content:
   -
     type: heading
