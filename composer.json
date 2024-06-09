@@ -14,8 +14,8 @@
         "laravel/framework": "^10.8",
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
-        "spatie/statamic-responsive-images": "^4.1",
-        "statamic/cms": "^4.0"
+        "spatie/statamic-responsive-images": "^5.0",
+        "statamic/cms": "^5.7"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.8.1",
