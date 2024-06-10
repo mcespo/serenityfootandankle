@@ -3,7 +3,9 @@
 @import "tailwindcss/utilities";
 
 /* This is all you. */
-[x-cloak] { display: none !important; }
+[x-cloak] {
+    display: none !important;
+}
 
 .prose a {
     @apply text-teal-serenity;

@@ -2,14 +2,12 @@ tabs:
   main:
     display: Main
     sections:
-      -
-        display: Address
+      - display: Address
         fields:
-          -
-            handle: name
+          - handle: name
             field:
               input_type: text
-              default: 'Serenity Foot and Ankle Specialists'
+              default: "Serenity Foot and Ankle Specialists"
               antlers: false
               type: text
               display: Name
@@ -18,8 +16,7 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
-          -
-            handle: address
+          - handle: address
             field:
               default: |-
                 767 Park Ave West Suite #180
@@ -32,34 +29,31 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
-          -
-            handle: address_single
+          - handle: address_single
             field:
               input_type: text
               antlers: false
               type: text
-              display: 'Address (Single Line)'
+              display: "Address (Single Line)"
               listable: hidden
               instructions_position: above
               visibility: visible
               replicator_preview: true
               hide_display: false
-              default: '767 Park Ave West Suite #180 Highland Park, IL 60035'
-          -
-            handle: phone
+              default: "767 Park Ave West Suite #180 Highland Park, IL 60035"
+          - handle: phone
             field:
               input_type: tel
               antlers: true
               type: text
-              display: 'Phone Number'
+              display: "Phone Number"
               listable: true
               instructions_position: above
               visibility: visible
               replicator_preview: true
               hide_display: false
               default: '<a href="tel:+18473803700">(847) 380-3700</a>'
-          -
-            handle: email
+          - handle: email
             field:
               input_type: email
               default: '<a href="mailto:Dr.Ibrahim@serenityfootandankle.com">Dr.Ibrahim@serenityfootandankle.com</a>'
@@ -71,11 +65,9 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
-      -
-        display: 'Hours of Operation'
+      - display: "Hours of Operation"
         fields:
-          -
-            handle: hours
+          - handle: hours
             field:
               type: table
               display: Hours

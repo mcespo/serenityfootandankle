@@ -41,19 +41,20 @@
                 video_link=video_link }} {{ /if }} {{ /unless }}
             </article>
             <div class="relative lg:col-span-5">
-            {{ partial:svg-bg-pattern }}
-            <aside
-                class="-ml-12 prose -mt-12 p-12 md:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden"
-            >
-            <div class="max-w-none rounded-xl shadow-xl ring-1
-                                    ring-gray-400/10 bg-gray-100 p-6">
-                <h2>Call today!</h2>
-            <p>{{ business:address }}</p>
-            <p>{{ business:phone }}</p>
-            <p>{{ business:email }}</p>
-                {{ business:hours | table }}
-            </div>
-            </aside>
+                {{ partial:svg-bg-pattern }}
+                <aside
+                    class="-ml-12 prose -mt-12 p-12 md:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden"
+                >
+                    <div
+                        class="max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 bg-gray-100 p-6"
+                    >
+                        <h2>Call today!</h2>
+                        <p>{{ business:address }}</p>
+                        <p>{{ business:phone }}</p>
+                        <p>{{ business:email }}</p>
+                        {{ business:hours | table }}
+                    </div>
+                </aside>
             </div>
         </div>
     </div>

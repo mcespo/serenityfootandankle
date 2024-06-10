@@ -3,10 +3,8 @@ tabs:
   main:
     display: Main
     sections:
-      -
-        fields:
-          -
-            handle: content
+      - fields:
+          - handle: content
             field:
               type: bard
               display: Content
@@ -28,50 +26,43 @@ tabs:
               remove_empty_nodes: false
               antlers: true
               container: assets
-          -
-            handle: video_link
+          - handle: video_link
             field:
               type: video
-              display: 'Video Link'
+              display: "Video Link"
               width: 75
-          -
-            handle: video_placement
+          - handle: video_placement
             field:
               options:
                 Top: Top
                 Bottom: Bottom
               searchable: false
               type: select
-              display: 'Video Placement'
+              display: "Video Placement"
               width: 25
   sidebar:
     display: Sidebar
     sections:
-      -
-        fields:
-          -
-            handle: title
+      - fields:
+          - handle: title
             field:
               type: text
               required: true
               validate:
                 - required
-          -
-            handle: slug
+          - handle: slug
             field:
               type: slug
               localizable: true
-              validate: 'max:200'
-          -
-            handle: date
+              validate: "max:200"
+          - handle: date
             field:
               type: date
               required: true
               default: now
               validate:
                 - required
-          -
-            handle: image
+          - handle: image
             field:
               use_breakpoints: false
               allow_fit: false
@@ -79,14 +70,13 @@ tabs:
                 - sm
                 - md
                 - lg
-              display: 'Featured Image'
-              instructions: 'Choose image using art direction.'
+              display: "Featured Image"
+              instructions: "Choose image using art direction."
               type: responsive
               container: assets
               restrict: true
               folder: posts
-          -
-            handle: tags
+          - handle: tags
             field:
               type: terms
               taxonomies:
@@ -94,26 +84,23 @@ tabs:
               display: Tags
               mode: select
   alt_password_protect:
-    display: 'Alt Password Protect'
+    display: "Alt Password Protect"
     sections:
-      -
-        fields:
-          -
-            handle: protect
+      - fields:
+          - handle: protect
             field:
               options:
                 none: None
-                alt_password_protect_default: 'Default Password'
-                alt_password_protect_custom: 'Custom Password'
+                alt_password_protect_default: "Default Password"
+                alt_password_protect_custom: "Custom Password"
               max_items: 1
               default: none
               type: select
-              display: 'Password Protect'
-              instructions: 'Default password set in site settings'
-          -
-            handle: alt_protect_custom_password
+              display: "Password Protect"
+              instructions: "Default password set in site settings"
+          - handle: alt_protect_custom_password
             field:
               type: text
-              display: 'Custom Password'
+              display: "Custom Password"
               if:
-                protect: 'equals alt_password_protect_custom'
+                protect: "equals alt_password_protect_custom"
