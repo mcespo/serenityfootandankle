@@ -10,7 +10,7 @@ nav_classes:
     class="sticky top-0 z-30 bg-inherit shadow"
 >
     <div class="mx-auto my-3 max-w-7xl px-2 sm:px-4 lg:px-8">
-        <div class="flex h-16 justify-between">
+        <div class="flex h-16 justify-between items-center">
             <div class="flex items-center px-2 lg:px-0">
                 <h1 class="sr-only">Serenity foot and Ankle</h1>
                 <a href="/" class="flex flex-shrink-0 items-center"
@@ -87,6 +87,7 @@ nav_classes:
                     {{ /unless }} {{ /nav:main_nav }}
                 </div>
             </div>
+            <p class="text-center text-teal-serenity hidden sm:block">{{ business:phone }}</p>
             <div class="flex items-center lg:hidden">
                 <button
                     x-on:click="mobileMenuToggle = !mobileMenuToggle"
@@ -130,7 +131,6 @@ nav_classes:
             </div>
         </div>
     </div>
-
 
 
     <!-- Mobile menu, show/hide based on menu state. -->

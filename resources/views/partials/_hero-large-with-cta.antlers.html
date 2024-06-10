@@ -1,21 +1,16 @@
-<div class="hero relative w-screen bg-neutral-600">
-    <div class="absolute inset-0 bg-black">
-        {{ responsive:hero_image quality:webp="50" md:quality:webp="75" class="h-full w-full object-cover grayscale-[75%] opacity-60" }}
+<div class="hero aspect-video relative w-screen bg-neutral-600">
+    <div class="absolute inset-0 aspect-video bg-black">
+        {{ responsive:hero_image quality:webp="50" md:quality:webp="75" class="h-auto ratio="16/9" w-full object-cover grayscale-[75%] opacity-60" }}
         <div
-            class="absolute inset-0 [border-image:_linear-gradient(hsl(183deg_51%_36_/_0.7),_hsl(2.58deg_50.8%_35.9%_/_0.7))_fill_1]"
+            class="absolute inset-0 aspect-video [border-image:_linear-gradient(hsl(183deg_51%_36_/_0.7),_hsl(2.58deg_50.8%_35.9%_/_0.7))_fill_1]"
             aria-hidden="true"
         ></div>
     </div>
     <div
-        class="relative mx-auto grid max-w-7xl gap-5 px-6 py-24 sm:py-32 lg:px-8 lg:py-40"
+        class="relative mx-auto grid max-w-7xl gap-5 px-6 lg:px-8 h-full content-center"
         x-data="{ visible: false }"
         x-intersect.once="visible = true"
     >
-        {{ svg src="img/serenity-foot-and-ankle-logo-white" x-show="visible"
-        x-transition:enter="transition ease-out duration-500 delay-100"
-        x-transition:enter-start="opacity-0 translate-y-20"
-        x-transition:enter-end="opacity-100 translate-y-0"
-        class="justify-self-center w-[min(100%,_15rem)] md:w-80" }}
         <div class="grid grid-flow-row gap-y-4 justify-center text-center" x-show="visible"
               x-transition:enter="transition ease-out duration-500 delay-200"
               x-transition:enter-start="opacity-0 translate-y-20"
