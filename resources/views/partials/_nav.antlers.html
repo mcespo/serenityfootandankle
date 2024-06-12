@@ -1,14 +1,15 @@
 ---
 nav_classes:
+    1: "lg:left-1/2 lg:ml-0 lg:-translate-x-3/4"
+    2: "lg:translate-x-[80%] lg:-translate-y-[28%]"
+
+mobile_classes:
     1: "1 pl-4 text-teal-serenity bg-gray-100 border-gray-200"
     2: "2 pl-6 text-teal-serenity bg-gray-200 border-gray-300"
     3: "3 pl-8 text-teal-serenity bg-gray-300 border-gray-400"
 ---
 
-<nav
-    x-data="{ mobileMenuToggle: false }"
-    class="sticky top-0 z-30 bg-inherit shadow"
->
+<nav class="sticky top-0 z-30 bg-inherit shadow">
     <div class="mx-auto my-3 max-w-7xl px-2 sm:px-4 lg:px-8">
         <div class="flex h-16 justify-between items-center">
             <div class="flex items-center px-2 lg:px-0">
@@ -38,7 +39,7 @@ nav_classes:
                         <button
                             x-on:click="{{ slug | camelize }} = !{{ slug | camelize }}"
                             type="button"
-                            class="group inline-flex items-center rounded-md bg-white text-base font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                            class="pl-1 group inline-flex items-center justify-between w-full rounded-md bg-white text-base font-medium focus:outline-none hover:ring-2 hover:ring-teal-serenity"
                             aria-expanded="false"
                         >
                             <span>All {{ title }}</span>
@@ -60,7 +61,7 @@ nav_classes:
                             x-cloak
                             x-show="{{ slug | camelize }}"
                             @click.outside="{{ slug | camelize }} = false"
-                            class="absolute z-30 -ml-4 mt-3 w-screen max-w-sm transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2"
+                            class="absolute z-30 -ml-4 mt-3 w-screen max-w-sm transform px-2 sm:px-0 {{ view:nav_classes[depth] }}"
                         >
                             <div
                                 class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5"
@@ -70,7 +71,7 @@ nav_classes:
                                 >
                                     <a
                                         href="{{ url }}"
-                                        class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50"
+                                        class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium {{ is_current ? 'border-gray-700 text-gray-900' : 'border-transparent hover:border-teal-serenity' }}"
                                     >
                                         <p
                                             class="text-base font-medium text-gray-900"
@@ -135,12 +136,16 @@ nav_classes:
 
     <!-- Mobile menu, show/hide based on menu state. -->
     <div class="lg:hidden" id="mobile-menu">
-        <div x-cloak x-show="mobileMenuToggle" class="space-y-1 pt-2">
+        <div
+            x-cloak
+            x-show="mobileMenuToggle"
+            class="space-y-1 pt-2 max-h-[80dvh] overflow-y-scroll"
+        >
             {{ nav:main_nav include_home="true" max_depth="3" }} {{ unless
             children }} {{ if remove_from_navigation == false }}
             <a
                 href="{{ url }}"
-                class="{{ view:nav_classes[depth] }} !mt-0 border-b-2 text-sm uppercase block pr-3.5 py-2 font-bold leading-7 {{ is_current ? 'cursor-default bg-indigo-100 !text-gray-900' : ' hover:bg-gray-50' }}"
+                class="{{ view:mobile_classes[depth] }} !mt-0 border-b-2 text-sm uppercase block pr-3.5 py-2 font-bold leading-7 {{ is_current ? 'cursor-default bg-indigo-100 !text-gray-900' : ' hover:bg-gray-50' }}"
             >
                 {{ title }}
             </a>
@@ -149,7 +154,7 @@ nav_classes:
                 <button
                     x-on:click="{{ slug | camelize }} = !{{ slug | camelize }}"
                     type="button"
-                    class="{{ view:nav_classes[depth] }} border-b-2 text-sm uppercase flex w-full items-center justify-between py-2 pr-3.5 font-semibold leading-7 hover:bg-gray-50"
+                    class="{{ view:mobile_classes[depth] }} border-b-2 text-sm uppercase flex w-full items-center justify-between py-2 pr-3.5 font-semibold leading-7 hover:bg-gray-50"
                     aria-controls="disclosure-1"
                     aria-expanded="false"
                 >
@@ -176,7 +181,7 @@ nav_classes:
                 >
                     <a
                         href="{{ url }}"
-                        class="{{ view:nav_classes[depth] }} !mt-0 pl-4 block text-sm py-2 pr-3 font-semibold leading-7 text-teal-serenity uppercase hover:bg-gray-50"
+                        class="{{ view:mobile_classes[depth] }} !mt-0 pl-4 block text-sm py-2 pr-3 font-semibold leading-7 text-teal-serenity uppercase hover:bg-gray-50"
                         >{{ title }}</a
                     >
                     {{ *recursive children* }}
