@@ -1,0 +1,6 @@
+id: 84930f61-da0f-42e4-b7e0-0243361cea95
+enabled: true
+source: /conditions-treated/sports-injuries-running-neuroma-tendonitis-tendinosis-heel-pain-foot-pain-foot-injury-ankle-injury-ankle-pain-foot-trauma-ankle-trauma/
+destination: /conditions-treated/sports-injuries
+type: '301'
+match_type: exact
