@@ -1,0 +1,6 @@
+id: d8ee4c6d-bc6b-44e9-893f-9d97b99fdb9c
+enabled: true
+source: /conditions-treated/bunion-hallux-abducto-valgus-big-toe-pain-side-of-toe-pain-bunion/
+destination: /conditions-treated/foot-and-ankle-deformities/bunion-hallux-abducto-valgus
+type: '301'
+match_type: exact
