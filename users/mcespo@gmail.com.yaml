@@ -16,3 +16,7 @@ preferences:
   redirect:
     redirects:
       per_page: 100
+      columns:
+        - source
+        - destination
+        - enabled
