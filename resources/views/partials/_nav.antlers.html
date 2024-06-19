@@ -1,7 +1,7 @@
 ---
 nav_classes:
     1: "lg:left-1/2 lg:ml-0 lg:-translate-x-3/4"
-    2: "lg:translate-x-[80%] lg:-translate-y-[28%]"
+    2: "lg:translate-x-[95%] lg:-translate-y-[31%]"
 
 mobile_classes:
     1: "1 pl-4 text-teal-serenity bg-gray-100 border-gray-200"
@@ -25,7 +25,7 @@ mobile_classes:
                     unless children }} {{ if remove_from_navigation == false }}
                     <a
                         href="{{ url }}"
-                        class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium {{ is_current ? 'border-gray-700 text-gray-900' : 'border-transparent hover:border-teal-serenity' }}"
+                        class="inline-flex items-center pl-3 pt-1 border-b-2 text-sm font-medium {{ is_current ? 'border-gray-700 text-gray-900' : 'border-transparent hover:border-teal-serenity' }}"
                     >
                         <p class="text-base font-medium text-gray-900">
                             {{ title }}
@@ -39,12 +39,12 @@ mobile_classes:
                         <button
                             x-on:click="{{ slug | camelize }} = !{{ slug | camelize }}"
                             type="button"
-                            class="pl-1 group inline-flex items-center justify-between w-full rounded-md bg-white text-base font-medium focus:outline-none hover:ring-2 hover:ring-teal-serenity"
+                            class="p-2 pl-3 group inline-flex items-center justify-between w-full rounded-md text-base font-medium focus:outline-none hover:ring-2 hover:ring-teal-serenity"
                             aria-expanded="false"
                         >
                             <span>All {{ title }}</span>
                             <svg
-                                class="ml-2 h-5 w-5 text-gray-400 group-hover:text-gray-500"
+                                class="ml-2 h-5 w-5 text-gray-900 group-hover:text-gray-500"
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 20 20"
                                 fill="currentColor"
