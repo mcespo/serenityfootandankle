@@ -1,0 +1,6 @@
+id: efe79c50-5630-428c-a767-176c02387a37
+enabled: true
+source: /achilles-tendon-pain-achilles-tendonitis-achilles-tendonosis-achilles-tendon-inflammation-back-of-heel-pain/
+destination: /conditions-treated/foot-and-ankle-deformities/achilles-tendon-disorders
+type: '301'
+match_type: exact
