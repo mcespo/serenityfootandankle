@@ -13,3 +13,6 @@ preferences:
         - image
         - title
         - status
+  redirect:
+    redirects:
+      per_page: 100
