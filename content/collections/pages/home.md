@@ -5,9 +5,9 @@ title: Home
 template: home
 author: 06b22383-0ba2-4c31-a8de-ab3b25c4bf61
 updated_by: 06b22383-0ba2-4c31-a8de-ab3b25c4bf61
-updated_at: 1718766567
-hero_heading: heading
-hero_subheading: subheading
+updated_at: 1718766857
+hero_heading: 'Get back to the activities you love!'
+hero_subheading: "Don't let foot or ankle pain stop you. We fix foot and ankle pain so you can walk, hike or run for life."
 hero_link:
   hero_cta_link: 'entry::cffddb49-a078-4436-86ce-5b9c696fd0fa'
   hero_cta_text: 'Book appointment'
