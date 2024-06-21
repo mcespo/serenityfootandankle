@@ -1,0 +1,6 @@
+id: 31b850a9-5d4e-4220-8bab-69bb4f6e042c
+enabled: true
+source: /2022/02/what-is-an-orthotic/
+destination: /posts/2022/02/orthotics
+type: '301'
+match_type: exact
