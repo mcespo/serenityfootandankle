@@ -1,0 +1,6 @@
+id: 66c0f69b-5c0d-4add-8453-66f498d0fc7c
+enabled: true
+source: /2023/04/achilles-tendonitis/
+destination: /posts/2023/04/achilles-tendonitis
+type: '301'
+match_type: exact
