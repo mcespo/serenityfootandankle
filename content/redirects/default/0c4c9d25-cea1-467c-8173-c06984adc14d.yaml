@@ -1,0 +1,6 @@
+id: 0c4c9d25-cea1-467c-8173-c06984adc14d
+enabled: true
+source: /2021/08/are-my-childs-feet-normal/
+destination: /posts/2021/08/are-my-childs-feet-normal
+type: '301'
+match_type: exact
