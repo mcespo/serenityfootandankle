@@ -15,7 +15,6 @@ hero_image:
   src: pages/screen-2x-1600x1067.jpeg
 video_link: /assets/pages/welcome-to-serenity-foot-and-ankle-specialists.mp4
 video_placement: Bottom
-protect: none
 content:
   -
     type: heading
