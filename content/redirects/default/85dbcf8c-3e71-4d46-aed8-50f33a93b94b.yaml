@@ -1,0 +1,6 @@
+id: 85dbcf8c-3e71-4d46-aed8-50f33a93b94b
+enabled: true
+source: /2021/12/bone-spurs/
+destination: /posts/2021/12/bone-spurs
+type: '301'
+match_type: exact
