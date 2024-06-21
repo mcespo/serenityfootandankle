@@ -1,0 +1,6 @@
+id: 06486a48-e744-49b3-b232-f0e39115482f
+enabled: true
+source: /2021/08/should-i-wear-flip-flops/
+destination: /posts/2021/08/should-i-wear-flip-flops
+type: '301'
+match_type: exact
