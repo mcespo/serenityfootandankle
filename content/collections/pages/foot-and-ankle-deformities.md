@@ -3,8 +3,10 @@ id: ddfa966a-56ba-48c1-9dcd-231248c259e0
 blueprint: page
 title: 'Foot and Ankle Deformities'
 updated_by: 06b22383-0ba2-4c31-a8de-ab3b25c4bf61
-updated_at: 1718947995
+updated_at: 1719088151
 parent: 47c93d35-a798-4628-9c68-5a9d921a1e88
+image:
+  src: pages/untitled-design-(2).png
 content:
   -
     type: paragraph
