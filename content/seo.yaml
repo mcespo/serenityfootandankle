@@ -7,6 +7,7 @@ canonical_url: '@seo:permalink'
 robots:
   - noindex
   - nofollow
-image: false
 priority: 0.5
 change_frequency: monthly
+bing_verification: B4B6B6E67002CDF80D4BE40D9958FDFB
+google_verification: google-site-verification=A8VwLKzeidGDB2clksAj-ag0B_u8w9XHAXXtg8QVcPM
