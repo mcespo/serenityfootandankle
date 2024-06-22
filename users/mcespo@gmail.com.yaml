@@ -20,6 +20,3 @@ preferences:
         - source
         - destination
         - enabled
-  assets:
-    assets:
-      mode: grid
