@@ -3,8 +3,10 @@ id: 5b683af3-0539-43a6-94b7-71ff2ae93023
 blueprint: page
 title: Flatfoot
 updated_by: 06b22383-0ba2-4c31-a8de-ab3b25c4bf61
-updated_at: 1718947789
+updated_at: 1719088124
 parent: ddfa966a-56ba-48c1-9dcd-231248c259e0
+image:
+  src: pages/untitled-design-(3).png
 content:
   -
     type: paragraph
