@@ -91,6 +91,20 @@ tabs:
               type: slug
               localizable: true
               validate: "max:200"
+          - handle: image
+            field:
+              use_breakpoints: false
+              allow_fit: false
+              breakpoints:
+                - sm
+                - md
+                - lg
+              display: "Featured Image"
+              instructions: "Choose image using art direction."
+              type: responsive
+              container: assets
+              restrict: true
+              folder: pages
           - handle: parent
             field:
               type: entries

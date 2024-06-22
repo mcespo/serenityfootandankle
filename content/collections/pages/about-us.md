@@ -5,17 +5,13 @@ title: 'About Us'
 author: 06b22383-0ba2-4c31-a8de-ab3b25c4bf61
 template: default
 updated_by: 06b22383-0ba2-4c31-a8de-ab3b25c4bf61
-updated_at: 1719086959
+updated_at: 1719087349
 parent: home
+image:
+  src: pages/dr-nooreen-ibrahim-2048x1366.jpg
 content:
   -
     type: paragraph
-    content:
-      -
-        type: image
-        attrs:
-          src: 'asset::assets::pages/dr-nooreen-ibrahim-2048x1366.jpg'
-          alt: null
   -
     type: paragraph
     content:
