@@ -104,7 +104,6 @@ tabs:
               type: responsive
               container: assets
               restrict: true
-              folder: pages
           - handle: parent
             field:
               type: entries
