@@ -3,8 +3,10 @@ id: ffc6b132-edde-425a-9368-994e128fe52b
 blueprint: page
 title: Arthritis
 updated_by: 06b22383-0ba2-4c31-a8de-ab3b25c4bf61
-updated_at: 1718948055
+updated_at: 1719087905
 parent: 47c93d35-a798-4628-9c68-5a9d921a1e88
+image:
+  src: pages/untitled-design.png
 content:
   -
     type: paragraph
