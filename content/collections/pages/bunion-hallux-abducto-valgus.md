@@ -5,8 +5,10 @@ video_link: 'https://youtu.be/kE2ertmYkSc'
 video_placement: Top
 title: 'Bunion/Hallux Abducto Valgus'
 updated_by: 06b22383-0ba2-4c31-a8de-ab3b25c4bf61
-updated_at: 1718947705
+updated_at: 1719088098
 parent: ddfa966a-56ba-48c1-9dcd-231248c259e0
+image:
+  src: pages/untitled-design-(5)-1719088094.png
 content:
   -
     type: paragraph
