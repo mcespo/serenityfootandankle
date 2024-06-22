@@ -75,7 +75,7 @@ tabs:
               type: responsive
               container: assets
               restrict: true
-              folder: /
+              folder: pages
           -
             handle: parent
             field:
