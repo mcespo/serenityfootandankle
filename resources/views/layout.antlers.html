@@ -14,24 +14,21 @@
         <meta name="theme-color" content="#ffffff">
         {{ vite src="resources/js/site.js|resources/css/site.css" }}
     </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J68CMFS8R1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
+        gtag('config', 'G-J68CMFS8R1');
+    </script>
+    <!-- Google tag (gtag.js) -->
     <body
         x-data="{ mobileMenuToggle: false }"
         :class="mobileMenuToggle ? 'overflow-y-hidden' : ''"
         class="grid min-h-[100dvh] grid-flow-row bg-gray-100 font-body leading-normal text-gray-800"
     >
-        <!-- Google Tag Manager (noscript) -->
-        {{#
-        <noscript
-            ><iframe
-                src="https://www.googletagmanager.com/ns.html?id=GTM-M7DHXQ7"
-                height="0"
-                width="0"
-                style="display: none; visibility: hidden"
-            ></iframe
-        ></noscript>
-        #}}
-        <!-- End Google Tag Manager (noscript) -->
         {{ partial:nav }}
         <div
             aria-hidden="true"
