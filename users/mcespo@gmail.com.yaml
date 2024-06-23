@@ -20,3 +20,5 @@ preferences:
         - source
         - destination
         - enabled
+  locale: en
+  favorites: {  }
