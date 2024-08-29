@@ -1,25 +1,48 @@
 tree:
-  - entry: home
-  - entry: 2bf4d814-1b03-482c-b4a4-6e45545a8a90
-  - entry: 47c93d35-a798-4628-9c68-5a9d921a1e88
+  -
+    entry: home
+  -
+    entry: 2bf4d814-1b03-482c-b4a4-6e45545a8a90
+  -
+    entry: 47c93d35-a798-4628-9c68-5a9d921a1e88
     children:
-      - entry: ffc6b132-edde-425a-9368-994e128fe52b
-      - entry: ddfa966a-56ba-48c1-9dcd-231248c259e0
+      -
+        entry: ffc6b132-edde-425a-9368-994e128fe52b
+      -
+        entry: ddfa966a-56ba-48c1-9dcd-231248c259e0
         children:
-          - entry: 5b683af3-0539-43a6-94b7-71ff2ae93023
-          - entry: 84a34800-287d-4d5b-8796-563425248cbd
-          - entry: 9ad2275c-bde0-4343-885f-a0826f2e37ee
-          - entry: 71d3cb17-4749-45c4-8b11-4d7808a93ba5
-          - entry: 37de3d24-0ac8-4e4d-9170-713562d4d5f2
-          - entry: becf0917-8085-41b3-b357-9c5923a1734e
-          - entry: 7b2b457b-9994-4123-ac5f-1a2e3766531b
-          - entry: e029d48d-179d-460b-afc9-1cd41ee6c94e
-          - entry: a2fcc5b9-4921-47f2-9298-cc5aab1cab4e
-      - entry: a0afa90c-7487-4c60-91d0-62f8c71005c3
-      - entry: c1948040-a406-4f0a-9bb1-d957028f68ab
-      - entry: dc9928a4-cfb1-441f-afb9-4b39d97fc911
+          -
+            entry: 5b683af3-0539-43a6-94b7-71ff2ae93023
+          -
+            entry: 84a34800-287d-4d5b-8796-563425248cbd
+          -
+            entry: 9ad2275c-bde0-4343-885f-a0826f2e37ee
+          -
+            entry: 71d3cb17-4749-45c4-8b11-4d7808a93ba5
+          -
+            entry: 37de3d24-0ac8-4e4d-9170-713562d4d5f2
+          -
+            entry: becf0917-8085-41b3-b357-9c5923a1734e
+          -
+            entry: 7b2b457b-9994-4123-ac5f-1a2e3766531b
+          -
+            entry: e029d48d-179d-460b-afc9-1cd41ee6c94e
+          -
+            entry: a2fcc5b9-4921-47f2-9298-cc5aab1cab4e
+      -
+        entry: a0afa90c-7487-4c60-91d0-62f8c71005c3
+      -
+        entry: c1948040-a406-4f0a-9bb1-d957028f68ab
+      -
+        entry: dc9928a4-cfb1-441f-afb9-4b39d97fc911
         children:
-          - entry: 060ec28b-3438-4278-a9de-cca51b2a1c8a
-      - entry: 097d5e53-2323-45f2-8e66-dd06d49948ca
-  - entry: e7c01ddb-b74e-4850-ac50-8746aef3e581
-  - entry: cffddb49-a078-4436-86ce-5b9c696fd0fa
+          -
+            entry: 060ec28b-3438-4278-a9de-cca51b2a1c8a
+      -
+        entry: 097d5e53-2323-45f2-8e66-dd06d49948ca
+  -
+    entry: e7c01ddb-b74e-4850-ac50-8746aef3e581
+  -
+    entry: cffddb49-a078-4436-86ce-5b9c696fd0fa
+  -
+    entry: dc498c84-672e-4bfc-bf91-d9033d5e0a85
