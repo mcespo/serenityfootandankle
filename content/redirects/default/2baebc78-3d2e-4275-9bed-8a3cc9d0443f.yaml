@@ -2,5 +2,5 @@ id: 2baebc78-3d2e-4275-9bed-8a3cc9d0443f
 enabled: true
 source: /2023/03/neuroma/
 destination: /posts/2023/03/neuroma
-type: '301'
+type: "301"
 match_type: exact

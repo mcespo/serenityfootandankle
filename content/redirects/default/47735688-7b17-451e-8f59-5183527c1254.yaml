@@ -2,5 +2,5 @@ id: 47735688-7b17-451e-8f59-5183527c1254
 enabled: true
 source: /2022/02/custom-orthotics/
 destination: /posts/2022/02/custom-vs-over-the-counter-orthotics
-type: '301'
+type: "301"
 match_type: exact

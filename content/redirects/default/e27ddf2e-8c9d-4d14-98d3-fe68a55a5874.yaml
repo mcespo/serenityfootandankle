@@ -2,5 +2,5 @@ id: e27ddf2e-8c9d-4d14-98d3-fe68a55a5874
 enabled: true
 source: /2021/09/chronic-ankle-instability/
 destination: /posts/2021/09/chronic-ankle-instability
-type: '301'
+type: "301"
 match_type: exact

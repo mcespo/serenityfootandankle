@@ -1,10 +1,10 @@
-title: '@seo:title'
-description: '@seo:content'
-site_name: 'Serenity Foot and Ankle Specialists'
+title: "@seo:title"
+description: "@seo:content"
+site_name: "Serenity Foot and Ankle Specialists"
 site_name_position: after
-site_name_separator: '|'
-canonical_url: '@seo:permalink'
+site_name_separator: "|"
+canonical_url: "@seo:permalink"
 robots:
 image: false
-priority: '0.5'
+priority: "0.5"
 change_frequency: yearly

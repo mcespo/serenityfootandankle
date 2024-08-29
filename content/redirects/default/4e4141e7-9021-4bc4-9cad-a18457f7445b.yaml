@@ -2,5 +2,5 @@ id: 4e4141e7-9021-4bc4-9cad-a18457f7445b
 enabled: true
 source: /2021/10/flat-feet/
 destination: /posts/2021/10/flat-feet
-type: '301'
+type: "301"
 match_type: exact

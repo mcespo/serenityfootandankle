@@ -2,5 +2,5 @@ id: 7a43f9a8-2199-490e-8bcd-5644a108ce8a
 enabled: true
 source: /plantar-warts/
 destination: /conditions-treated/podiatry-for-children/plantar-warts
-type: '301'
+type: "301"
 match_type: exact

@@ -2,5 +2,5 @@ id: fb4dcffc-100a-483f-b82e-f73b3fe77b5a
 enabled: true
 source: /custom-orthotics/
 destination: /conditions-treated/custom-orthotics
-type: '301'
+type: "301"
 match_type: exact

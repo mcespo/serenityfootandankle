@@ -2,5 +2,5 @@ id: bcdb5fa2-47ed-4051-b295-573bffcca8be
 enabled: true
 source: /2021/10/how-do-i-take-care-of-my-feet/
 destination: /posts/2021/10/how-do-i-take-care-of-my-feet
-type: '301'
+type: "301"
 match_type: exact

@@ -2,5 +2,5 @@ id: 6dbbda0b-92c0-47f9-8343-da1bf09fd926
 enabled: true
 source: /2021/11/how-to-pick-great-shoes-how-to-pick-good-shoe-gear-how-to-pick-good-shoes-how-to-pick-the-right-shoe-tennis-shoes/
 destination: /posts/2021/11/what-pair-of-tennis-should-i-wear
-type: '301'
+type: "301"
 match_type: exact

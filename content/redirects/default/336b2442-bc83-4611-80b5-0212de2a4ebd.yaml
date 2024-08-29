@@ -2,5 +2,5 @@ id: 336b2442-bc83-4611-80b5-0212de2a4ebd
 enabled: true
 source: /2023/02/pickleball-and-preventing-injuries/
 destination: /posts/2023/02/pickleball-and-preventing-injuries
-type: '301'
+type: "301"
 match_type: exact

@@ -2,5 +2,5 @@ id: 3cb04d3c-7b8a-4926-9851-0f0ce7f0ee93
 enabled: true
 source: /2023/03/metatarsalgia-ball-of-foot-pain/
 destination: /posts/2023/03/metatarsalgia
-type: '301'
+type: "301"
 match_type: exact

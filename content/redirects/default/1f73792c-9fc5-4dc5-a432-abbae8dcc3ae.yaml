@@ -2,5 +2,5 @@ id: 1f73792c-9fc5-4dc5-a432-abbae8dcc3ae
 enabled: true
 source: /2021/07/i-love-to-dance-but-my-feet-are-killing-me/
 destination: /posts/2021/07/i-love-to-dance-but-my-feet-are-killing-me
-type: '301'
+type: "301"
 match_type: exact

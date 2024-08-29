@@ -1,12 +1,10 @@
-title: 'Page Template'
+title: "Page Template"
 tabs:
   main:
     display: Main
     sections:
-      -
-        fields:
-          -
-            handle: content
+      - fields:
+          - handle: content
             field:
               type: bard
               display: Content
@@ -27,42 +25,36 @@ tabs:
               remove_empty_nodes: false
               antlers: true
               container: assets
-          -
-            handle: video_link
+          - handle: video_link
             field:
               type: video
-              display: 'Video Link'
+              display: "Video Link"
               width: 75
-          -
-            handle: video_placement
+          - handle: video_placement
             field:
               options:
                 Top: Top
                 Bottom: Bottom
               searchable: false
               type: select
-              display: 'Video Placement'
+              display: "Video Placement"
               width: 25
   sidebar:
     display: Sidebar
     sections:
-      -
-        fields:
-          -
-            handle: title
+      - fields:
+          - handle: title
             field:
               type: text
               required: true
               validate:
                 - required
-          -
-            handle: slug
+          - handle: slug
             field:
               type: slug
               localizable: true
-              validate: 'max:200'
-          -
-            handle: image
+              validate: "max:200"
+          - handle: image
             field:
               use_breakpoints: false
               allow_fit: false
@@ -70,14 +62,13 @@ tabs:
                 - sm
                 - md
                 - lg
-              display: 'Featured Image'
-              instructions: 'Choose image using art direction.'
+              display: "Featured Image"
+              instructions: "Choose image using art direction."
               type: responsive
               container: assets
               restrict: true
               folder: pages
-          -
-            handle: parent
+          - handle: parent
             field:
               type: entries
               collections:
@@ -88,10 +79,8 @@ tabs:
   SEO:
     display: SEO
     sections:
-      -
-        fields:
-          -
-            handle: seo
+      - fields:
+          - handle: seo
             field:
               type: seo_pro
               listable: false

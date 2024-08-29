@@ -2,5 +2,5 @@ id: 1b49bebd-6fd5-405c-ba97-03e84f0d0262
 enabled: true
 source: /2021/09/are-pedicures-safe/
 destination: /posts/2021/09/are-pedicures-safe
-type: '301'
+type: "301"
 match_type: exact

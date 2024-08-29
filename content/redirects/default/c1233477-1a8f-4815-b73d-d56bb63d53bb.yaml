@@ -2,5 +2,5 @@ id: c1233477-1a8f-4815-b73d-d56bb63d53bb
 enabled: true
 source: /flatfeet-flatfoot-my-flatfeet-hurt-fallen-arches-medial-arch-collapse-no-more-arch-medial-arch-collapse/
 destination: /conditions-treated/foot-and-ankle-deformities/flatfoot
-type: '301'
+type: "301"
 match_type: exact
