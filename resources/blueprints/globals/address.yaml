@@ -8,20 +8,20 @@ tabs:
               input_type: text
               antlers: true
               type: text
-              display: "Single Line Address"
+              display: 'Single Line Address'
               listable: hidden
               instructions_position: above
               visibility: visible
               replicator_preview: true
               hide_display: false
-              placeholder: "767 Park Ave West Suite #180 Highland Park, IL 60035"
+              placeholder: '767 Park Ave West Suite #180 Highland Park, IL 60035'
           - handle: phone
             field:
               input_type: tel
-              default: "(847) 380-3700"
+              default: '(847) 380-3700'
               antlers: false
               type: text
-              display: "Phone Number"
+              display: 'Phone Number'
               listable: hidden
               instructions_position: above
               visibility: visible

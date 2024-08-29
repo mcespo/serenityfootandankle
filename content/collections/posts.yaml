@@ -3,7 +3,7 @@ template: default
 taxonomies:
   - tags
 revisions: false
-route: "/posts/{year}/{month}/{slug}"
+route: '/posts/{year}/{month}/{slug}'
 date: true
 sort_dir: asc
 date_behavior:
@@ -11,5 +11,5 @@ date_behavior:
   future: private
 preview_targets:
   - label: Entry
-    url: "{permalink}"
+    url: '{permalink}'
     refresh: true

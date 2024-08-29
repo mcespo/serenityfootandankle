@@ -24,11 +24,11 @@ In order to ensure that the Statamic community is welcoming to all and generally
 
 ## Important Links
 
--   [Statamic Main Site](https://statamic.com)
--   [Statamic Documentation][docs]
--   [Statamic Core Package Repo][cms-repo]
--   [Statamic Migrator](https://github.com/statamic/migrator)
--   [Statamic Discord][discord]
+- [Statamic Main Site](https://statamic.com)
+- [Statamic Documentation][docs]
+- [Statamic Core Package Repo][cms-repo]
+- [Statamic Migrator](https://github.com/statamic/migrator)
+- [Statamic Discord][discord]
 
 [docs]: https://statamic.dev/
 [discord]: https://statamic.com/discord

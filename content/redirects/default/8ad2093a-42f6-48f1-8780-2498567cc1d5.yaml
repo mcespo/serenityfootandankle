@@ -2,5 +2,5 @@ id: 8ad2093a-42f6-48f1-8780-2498567cc1d5
 enabled: true
 source: /conditions-treated/podiatry-for-children-kids-foot-health-childrens-foot-health-plantar-warts-ingrown-toenails/
 destination: /conditions-treated/podiatry-for-children
-type: "301"
+type: '301'
 match_type: exact

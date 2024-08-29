@@ -46,4 +46,4 @@ tree:
     entry: cffddb49-a078-4436-86ce-5b9c696fd0fa
   - id: 7d445f1a-1a87-4171-9af8-42ce903f6de0
     title: Portal
-    url: "https://patientportal.advancedmd.com/149690/account/logon"
+    url: 'https://patientportal.advancedmd.com/149690/account/logon'

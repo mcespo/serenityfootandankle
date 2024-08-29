@@ -2,5 +2,5 @@ id: e4624c0c-7d5e-42c1-a654-a660383d12d2
 enabled: true
 source: /conditions-treated/custom-orthotics-custom-orthotics-for-foot-pain-orthotics-for-ankle-pain-custom-orthotics-are-great/
 destination: /conditions-treated/custom-orthotics
-type: "301"
+type: '301'
 match_type: exact

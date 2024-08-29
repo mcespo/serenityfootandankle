@@ -1,10 +1,9 @@
 {{ if video_link | is_embeddable }}
-<!-- Youtube and Vimeo -->
-<iframe class="w-full aspect-video" src="{{ video_link | embed_url }}"></iframe>
+  <!-- Youtube and Vimeo -->
+  <iframe class="aspect-video w-full" src="{{ video_link | embed_url }}"></iframe>
 {{ else }}
-<!-- Other HTML5 video types -->
-<video class="w-full aspect-video" controls>
+  <!-- Other HTML5 video types -->
+  <video class="aspect-video w-full" controls>
     <source src="{{ video_link | embed_url }}" type="video/mp4" />
-</video>
-
+  </video>
 {{ /if }}

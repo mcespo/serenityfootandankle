@@ -6,10 +6,10 @@ tabs:
           - handle: text_field
             field:
               input_type: tel
-              default: "(847) 380-3700"
+              default: '(847) 380-3700'
               antlers: false
               type: text
-              display: "Text Field"
+              display: 'Text Field'
               listable: hidden
               instructions_position: above
               visibility: visible

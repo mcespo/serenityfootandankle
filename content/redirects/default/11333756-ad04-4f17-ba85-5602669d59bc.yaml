@@ -2,5 +2,5 @@ id: 11333756-ad04-4f17-ba85-5602669d59bc
 enabled: true
 source: /conditions-treated/arthritis-joint-pain-foot-joint-pain-foot-arthritis-ankle-arthritis/
 destination: /conditions-treated/arthritis
-type: "301"
+type: '301'
 match_type: exact

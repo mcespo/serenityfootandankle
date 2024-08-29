@@ -2,5 +2,5 @@ id: 0dece13e-0f66-4470-8a26-cea9acd9d2d6
 enabled: true
 source: /conditions-treated/heel-pain-and-arch-pain-foot-pain-ankle-pain-heel-pain-heel-injury/
 destination: /conditions-treated/heel-pain-and-arch-pain
-type: "301"
+type: '301'
 match_type: exact

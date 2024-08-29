@@ -1,4 +1,4 @@
-title: "Contact Template"
+title: 'Contact Template'
 tabs:
   main:
     display: Main
@@ -50,12 +50,12 @@ tabs:
               fullscreen: true
               sets:
                 new_set_group:
-                  display: "New Set Group"
+                  display: 'New Set Group'
                   instructions: null
                   icon: null
                   sets:
                     new_set:
-                      display: "New Set"
+                      display: 'New Set'
                       instructions: null
                       icon: null
                       fields:
@@ -100,7 +100,7 @@ tabs:
               line_wrapping: true
               antlers: false
               type: code
-              display: "Map URL"
+              display: 'Map URL'
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -120,7 +120,7 @@ tabs:
             field:
               type: slug
               localizable: true
-              validate: "max:200"
+              validate: 'max:200'
           - handle: parent
             field:
               type: entries

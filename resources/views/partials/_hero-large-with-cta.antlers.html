@@ -1,32 +1,24 @@
 <div class="bg-black">
-    <div class="relative bg-gray-800">
-        <div class="absolute inset-0">
-            {{ responsive:hero_image quality:webp="50" md:quality:webp="75"
-            lg:quality:webp="100" class="h-full w-full object-cover" }}
-            <div
-                class="absolute inset-0 bg-gray-600 mix-blend-multiply"
-                aria-hidden="true"
-            ></div>
-        </div>
-        <div
-            class="relative mx-auto max-w-6xl px-6 py-24 sm:py-32 lg:px-8 prose text-white"
-            x-data="{ visible: false }"
-            x-intersect.once="visible = true"
-        >
-            <h1
-                class="font-display text-4xl uppercase tracking-tight text-current sm:text-5xl md:text-6xl text-balance"
-            >
-                {{ hero_heading }}
-            </h1>
-            <p class="sm:text-2xl md:text-3xl text-balance">
-                {{ hero_subheading }}
-            </p>
-            <a
-                class="rounded-md bg-teal-serenity px-3.5 py-2.5 text-sm font-semibold shadow-sm hover:bg-blue-serenity focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 !text-current no-underline"
-                href="{{ hero_link:hero_cta_link }}"
-            >
-                {{ hero_link:hero_cta_text }}
-            </a>
-        </div>
+  <div class="relative bg-gray-800">
+    <div class="absolute inset-0">
+      {{ responsive:hero_image quality:webp="50" md:quality:webp="75" lg:quality:webp="100" class="h-full w-full object-cover" }}
+      <div class="absolute inset-0 bg-gray-600 mix-blend-multiply" aria-hidden="true"></div>
     </div>
+    <div
+      class="prose relative mx-auto max-w-6xl px-6 py-24 text-white sm:py-32 lg:px-8"
+      x-data="{ visible: false }"
+      x-intersect.once="visible = true"
+    >
+      <h1 class="font-display text-balance text-4xl uppercase tracking-tight text-current sm:text-5xl md:text-6xl">
+        {{ hero_heading }}
+      </h1>
+      <p class="text-balance sm:text-2xl md:text-3xl">{{ hero_subheading }}</p>
+      <a
+        class="rounded-md bg-teal-serenity px-3.5 py-2.5 text-sm font-semibold !text-current no-underline shadow-sm hover:bg-blue-serenity focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+        href="{{ hero_link:hero_cta_link }}"
+      >
+        {{ hero_link:hero_cta_text }}
+      </a>
+    </div>
+  </div>
 </div>

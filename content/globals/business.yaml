@@ -1,25 +1,25 @@
 title: Business
 data:
-  name: "Serenity Foot and Ankle Specialists"
+  name: 'Serenity Foot and Ankle Specialists'
   address: |-
     767 Park Ave West Suite #180<br>
     Highland Park, IL 60035
-  address_single: "767 Park Ave West Suite #180 Highland Park, IL 60035"
+  address_single: '767 Park Ave West Suite #180 Highland Park, IL 60035'
   phone: '<a href="tel:+18473803700">(847) 380-3700</a>'
   email: '<a href="mailto:Dr.Ibrahim@serenityfootandankle.com">Dr.Ibrahim@serenityfootandankle.com</a>'
   hours:
     - cells:
         - Monday
-        - "9 AM – 3 PM"
+        - '9 AM – 3 PM'
     - cells:
         - Tuesday
-        - "9 AM – 3 PM"
+        - '9 AM – 3 PM'
     - cells:
         - Wednesday
         - Closed
     - cells:
         - Thursday
-        - "9 AM – 3 PM"
+        - '9 AM – 3 PM'
     - cells:
         - Friday
         - Closed

@@ -1,8 +1,7 @@
 <?php
 
 return [
-
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Active Static Caching Strategy
     |--------------------------------------------------------------------------
@@ -12,9 +11,9 @@ return [
     |
     */
 
-    'strategy' => env('STATAMIC_STATIC_CACHING_STRATEGY', null),
+  "strategy" => env("STATAMIC_STATIC_CACHING_STRATEGY", null),
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Caching Strategies
     |--------------------------------------------------------------------------
@@ -26,26 +25,24 @@ return [
     |
     */
 
-    'strategies' => [
-
-        'half' => [
-            'driver' => 'application',
-            'expiry' => null,
-        ],
-
-        'full' => [
-            'driver' => 'file',
-            'path' => public_path('static'),
-            'lock_hold_length' => 0,
-            'permissions' => [
-                'directory' => 0755,
-                'file' => 0644,
-            ],
-        ],
-
+  "strategies" => [
+    "half" => [
+      "driver" => "application",
+      "expiry" => null,
     ],
 
-    /*
+    "full" => [
+      "driver" => "file",
+      "path" => public_path("static"),
+      "lock_hold_length" => 0,
+      "permissions" => [
+        "directory" => 0755,
+        "file" => 0644,
+      ],
+    ],
+  ],
+
+  /*
     |--------------------------------------------------------------------------
     | Exclusions
     |--------------------------------------------------------------------------
@@ -56,17 +53,15 @@ return [
     |
     */
 
-    'exclude' => [
+  "exclude" => [
+    "class" => null,
 
-        'class' => null,
-
-        'urls' => [
-            //
-        ],
-
+    "urls" => [
+      //
     ],
+  ],
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Invalidation Rules
     |--------------------------------------------------------------------------
@@ -79,17 +74,15 @@ return [
     |
     */
 
-    'invalidation' => [
+  "invalidation" => [
+    "class" => null,
 
-        'class' => null,
-
-        'rules' => [
-            //
-        ],
-
+    "rules" => [
+      //
     ],
+  ],
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Ignoring Query Strings
     |--------------------------------------------------------------------------
@@ -100,9 +93,9 @@ return [
     |
     */
 
-    'ignore_query_strings' => false,
+  "ignore_query_strings" => false,
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Replacers
     |--------------------------------------------------------------------------
@@ -112,12 +105,9 @@ return [
     |
     */
 
-    'replacers' => [
-        \Statamic\StaticCaching\Replacers\CsrfTokenReplacer::class,
-        \Statamic\StaticCaching\Replacers\NoCacheReplacer::class,
-    ],
+  "replacers" => [\Statamic\StaticCaching\Replacers\CsrfTokenReplacer::class, \Statamic\StaticCaching\Replacers\NoCacheReplacer::class],
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Warm Queue
     |--------------------------------------------------------------------------
@@ -127,6 +117,5 @@ return [
     |
     */
 
-    'warm_queue' => null,
-
+  "warm_queue" => null,
 ];

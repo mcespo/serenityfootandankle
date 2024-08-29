@@ -2,5 +2,5 @@ id: 25f9f227-8bc6-4506-8523-aac0d037e7a1
 enabled: true
 source: /posterior-tibial-tendon-dysfunction-pttd-flatfeet-flatfoot-medial-arch-collapse-pttd-tendon-pain-tendon-irritation-foot-pain-inside-of-foot-pain-inside-of-ankle-pain/
 destination: /conditions-treated/foot-and-ankle-deformities/posterior-tibial-tendon-dysfunction-pttd
-type: "301"
+type: '301'
 match_type: exact

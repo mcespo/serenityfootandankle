@@ -4,9 +4,9 @@
 
 /* This is all you. */
 [x-cloak] {
-    display: none !important;
+  display: none !important;
 }
 
 .prose a {
-    @apply text-teal-serenity;
+  @apply text-teal-serenity;
 }

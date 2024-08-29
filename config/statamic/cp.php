@@ -1,8 +1,7 @@
 <?php
 
 return [
-
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Control Panel
     |--------------------------------------------------------------------------
@@ -11,11 +10,11 @@ return [
     |
     */
 
-    'enabled' => env('CP_ENABLED', true),
+  "enabled" => env("CP_ENABLED", true),
 
-    'route' => env('CP_ROUTE', 'cp'),
+  "route" => env("CP_ROUTE", "cp"),
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Start Page
     |--------------------------------------------------------------------------
@@ -25,9 +24,9 @@ return [
     |
     */
 
-    'start_page' => 'dashboard',
+  "start_page" => "dashboard",
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Dashboard Widgets
     |--------------------------------------------------------------------------
@@ -37,11 +36,9 @@ return [
     |
     */
 
-    'widgets' => [
-        'getting_started',
-    ],
+  "widgets" => ["getting_started"],
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Date Format
     |--------------------------------------------------------------------------
@@ -56,9 +53,9 @@ return [
     |
     */
 
-    'date_format' => 'Y-m-d',
+  "date_format" => "Y-m-d",
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Pagination
     |--------------------------------------------------------------------------
@@ -68,11 +65,11 @@ return [
     |
     */
 
-    'pagination_size' => 50,
+  "pagination_size" => 50,
 
-    'pagination_size_options' => [10, 25, 50, 100, 500],
+  "pagination_size_options" => [10, 25, 50, 100, 500],
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Links to Documentation
     |--------------------------------------------------------------------------
@@ -81,9 +78,9 @@ return [
     |
     */
 
-    'link_to_docs' => env('STATAMIC_LINK_TO_DOCS', true),
+  "link_to_docs" => env("STATAMIC_LINK_TO_DOCS", true),
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Support Link
     |--------------------------------------------------------------------------
@@ -93,9 +90,9 @@ return [
     |
     */
 
-    'support_url' => env('STATAMIC_SUPPORT_URL', 'https://statamic.com/support'),
+  "support_url" => env("STATAMIC_SUPPORT_URL", "https://statamic.com/support"),
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Theme
     |--------------------------------------------------------------------------
@@ -105,9 +102,9 @@ return [
     |
     */
 
-    'theme' => env('STATAMIC_THEME', 'rad'),
+  "theme" => env("STATAMIC_THEME", "rad"),
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | White Labeling
     |--------------------------------------------------------------------------
@@ -118,12 +115,11 @@ return [
     |
     */
 
-    'custom_cms_name' => env('STATAMIC_CUSTOM_CMS_NAME', 'Statamic'),
+  "custom_cms_name" => env("STATAMIC_CUSTOM_CMS_NAME", "Statamic"),
 
-    'custom_logo_url' => env('STATAMIC_CUSTOM_LOGO_URL', null),
+  "custom_logo_url" => env("STATAMIC_CUSTOM_LOGO_URL", null),
 
-    'custom_favicon_url' => env('STATAMIC_CUSTOM_FAVICON_URL', null),
+  "custom_favicon_url" => env("STATAMIC_CUSTOM_FAVICON_URL", null),
 
-    'custom_css_url' => env('STATAMIC_CUSTOM_CSS_URL', null),
-
+  "custom_css_url" => env("STATAMIC_CUSTOM_CSS_URL", null),
 ];

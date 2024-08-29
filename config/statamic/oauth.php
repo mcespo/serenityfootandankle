@@ -1,21 +1,20 @@
 <?php
 
 return [
+  "enabled" => env("STATAMIC_OAUTH_ENABLED", false),
 
-    'enabled' => env('STATAMIC_OAUTH_ENABLED', false),
+  "email_login_enabled" => true,
 
-    'email_login_enabled' => true,
+  "providers" => [
+    // 'github',
+  ],
 
-    'providers' => [
-        // 'github',
-    ],
+  "routes" => [
+    "login" => "oauth/{provider}",
+    "callback" => "oauth/{provider}/callback",
+  ],
 
-    'routes' => [
-        'login' => 'oauth/{provider}',
-        'callback' => 'oauth/{provider}/callback',
-    ],
-
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Remember Me
     |--------------------------------------------------------------------------
@@ -26,6 +25,5 @@ return [
     |
     */
 
-    'remember_me' => true,
-
+  "remember_me" => true,
 ];

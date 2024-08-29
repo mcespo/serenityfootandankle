@@ -2,5 +2,5 @@ id: ef678c4e-0497-4671-a843-0934fb7b32da
 enabled: true
 source: /chronic-ankle-instability-ankle-pain-ankle-sprain-ankle-injury-ankle-fracture/
 destination: /conditions-treated/foot-and-ankle-deformities/chronic-ankle-instability
-type: "301"
+type: '301'
 match_type: exact

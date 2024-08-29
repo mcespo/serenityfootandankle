@@ -2,5 +2,5 @@ id: 9cb32201-f503-4b87-af1b-b9617483d6ed
 enabled: true
 source: /conditions-treated/foot-deformities-hammertoes-arch-pain-flatfeet-high-arches-bunion-toe-pain-arch-pain-foot-pain-ankle-pain/
 destination: /conditions-treated/foot-and-ankle-deformities
-type: "301"
+type: '301'
 match_type: exact

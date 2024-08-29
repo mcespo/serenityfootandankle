@@ -2,5 +2,5 @@ id: b89208a1-7e41-4372-af4c-74f27d93335c
 enabled: true
 source: /conditions-treated/big-toe-pain-hallux-rigidus/
 destination: /conditions-treated/foot-and-ankle-deformities/big-toe-pain-hallux-rigidus
-type: "301"
+type: '301'
 match_type: exact

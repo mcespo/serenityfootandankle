@@ -2,5 +2,5 @@ id: da08b956-7f2f-4d83-ab6b-15f5495d72ec
 enabled: true
 source: /2022/01/foot-surgery-my-foot-surgery-experience-surgery-bunion-pain-bunion-surgery/
 destination: /posts/2022/01/a-foot-and-ankle-specialists-foot-surgery-experience-part-1
-type: "301"
+type: '301'
 match_type: exact

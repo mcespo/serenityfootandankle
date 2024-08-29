@@ -29,7 +29,7 @@ tabs:
           - handle: video_link
             field:
               type: video
-              display: "Video Link"
+              display: 'Video Link'
               width: 75
           - handle: video_placement
             field:
@@ -38,7 +38,7 @@ tabs:
                 Bottom: Bottom
               searchable: false
               type: select
-              display: "Video Placement"
+              display: 'Video Placement'
               width: 25
   sidebar:
     display: Sidebar
@@ -54,7 +54,7 @@ tabs:
             field:
               type: slug
               localizable: true
-              validate: "max:200"
+              validate: 'max:200'
           - handle: date
             field:
               type: date
@@ -70,8 +70,8 @@ tabs:
                 - sm
                 - md
                 - lg
-              display: "Featured Image"
-              instructions: "Choose image using art direction."
+              display: 'Featured Image'
+              instructions: 'Choose image using art direction.'
               type: responsive
               container: assets
               restrict: true

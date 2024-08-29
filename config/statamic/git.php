@@ -1,8 +1,7 @@
 <?php
 
 return [
-
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Git Integration
     |--------------------------------------------------------------------------
@@ -15,9 +14,9 @@ return [
     |
     */
 
-    'enabled' => env('STATAMIC_GIT_ENABLED', false),
+  "enabled" => env("STATAMIC_GIT_ENABLED", false),
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Automatically Run
     |--------------------------------------------------------------------------
@@ -30,9 +29,9 @@ return [
     |
     */
 
-    'automatic' => env('STATAMIC_GIT_AUTOMATIC', true),
+  "automatic" => env("STATAMIC_GIT_AUTOMATIC", true),
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Queue Connection
     |--------------------------------------------------------------------------
@@ -44,9 +43,9 @@ return [
     |
     */
 
-    'queue_connection' => env('STATAMIC_GIT_QUEUE_CONNECTION'),
+  "queue_connection" => env("STATAMIC_GIT_QUEUE_CONNECTION"),
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Dispatch Delay
     |--------------------------------------------------------------------------
@@ -60,9 +59,9 @@ return [
     |
     */
 
-    'dispatch_delay' => env('STATAMIC_GIT_DISPATCH_DELAY', 0),
+  "dispatch_delay" => env("STATAMIC_GIT_DISPATCH_DELAY", 0),
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Git User
     |--------------------------------------------------------------------------
@@ -75,14 +74,14 @@ return [
     |
     */
 
-    'use_authenticated' => true,
+  "use_authenticated" => true,
 
-    'user' => [
-        'name' => env('STATAMIC_GIT_USER_NAME', 'Spock'),
-        'email' => env('STATAMIC_GIT_USER_EMAIL', 'spock@example.com'),
-    ],
+  "user" => [
+    "name" => env("STATAMIC_GIT_USER_NAME", "Spock"),
+    "email" => env("STATAMIC_GIT_USER_EMAIL", "spock@example.com"),
+  ],
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Tracked Paths
     |--------------------------------------------------------------------------
@@ -94,19 +93,19 @@ return [
     |
     */
 
-    'paths' => [
-        base_path('content'),
-        base_path('users'),
-        resource_path('blueprints'),
-        resource_path('fieldsets'),
-        resource_path('forms'),
-        resource_path('users'),
-        resource_path('preferences.yaml'),
-        storage_path('forms'),
-        public_path('assets'),
-    ],
+  "paths" => [
+    base_path("content"),
+    base_path("users"),
+    resource_path("blueprints"),
+    resource_path("fieldsets"),
+    resource_path("forms"),
+    resource_path("users"),
+    resource_path("preferences.yaml"),
+    storage_path("forms"),
+    public_path("assets"),
+  ],
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Git Binary
     |--------------------------------------------------------------------------
@@ -116,9 +115,9 @@ return [
     |
     */
 
-    'binary' => env('STATAMIC_GIT_BINARY', 'git'),
+  "binary" => env("STATAMIC_GIT_BINARY", "git"),
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Commands
     |--------------------------------------------------------------------------
@@ -131,12 +130,9 @@ return [
     |
     */
 
-    'commands' => [
-        'git add {{ paths }}',
-        'git -c "user.name={{ name }}" -c "user.email={{ email }}" commit -m "{{ message }}"',
-    ],
+  "commands" => ["git add {{ paths }}", 'git -c "user.name={{ name }}" -c "user.email={{ email }}" commit -m "{{ message }}"'],
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Push
     |--------------------------------------------------------------------------
@@ -149,9 +145,9 @@ return [
     |
     */
 
-    'push' => env('STATAMIC_GIT_PUSH', false),
+  "push" => env("STATAMIC_GIT_PUSH", false),
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Ignored Events
     |--------------------------------------------------------------------------
@@ -162,12 +158,12 @@ return [
     |
     */
 
-    'ignored_events' => [
-        // \Statamic\Events\UserSaved::class,
-        // \Statamic\Events\UserDeleted::class,
-    ],
+  "ignored_events" => [
+    // \Statamic\Events\UserSaved::class,
+    // \Statamic\Events\UserDeleted::class,
+  ],
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Locale
     |--------------------------------------------------------------------------
@@ -178,6 +174,5 @@ return [
     |
     */
 
-    'locale' => env('STATAMIC_GIT_LOCALE', null),
-
+  "locale" => env("STATAMIC_GIT_LOCALE", null),
 ];

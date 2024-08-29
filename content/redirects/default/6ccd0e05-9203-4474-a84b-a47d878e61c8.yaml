@@ -2,5 +2,5 @@ id: 6ccd0e05-9203-4474-a84b-a47d878e61c8
 enabled: true
 source: /2023/05/common-injuries-in-cavus-feet/
 destination: /posts/2023/05/common-injuries-in-cavus-feet
-type: "301"
+type: '301'
 match_type: exact

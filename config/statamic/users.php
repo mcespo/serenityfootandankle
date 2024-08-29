@@ -1,8 +1,7 @@
 <?php
 
 return [
-
-    /*
+  /*
     |--------------------------------------------------------------------------
     | User Repository
     |--------------------------------------------------------------------------
@@ -15,25 +14,23 @@ return [
     |
     */
 
-    'repository' => 'file',
+  "repository" => "file",
 
-    'repositories' => [
-
-        'file' => [
-            'driver' => 'file',
-            'paths' => [
-                'roles' => resource_path('users/roles.yaml'),
-                'groups' => resource_path('users/groups.yaml'),
-            ],
-        ],
-
-        'eloquent' => [
-            'driver' => 'eloquent',
-        ],
-
+  "repositories" => [
+    "file" => [
+      "driver" => "file",
+      "paths" => [
+        "roles" => resource_path("users/roles.yaml"),
+        "groups" => resource_path("users/groups.yaml"),
+      ],
     ],
 
-    /*
+    "eloquent" => [
+      "driver" => "eloquent",
+    ],
+  ],
+
+  /*
     |--------------------------------------------------------------------------
     | Avatars
     |--------------------------------------------------------------------------
@@ -45,9 +42,9 @@ return [
     |
     */
 
-    'avatars' => 'initials',
+  "avatars" => "initials",
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | New User Roles
     |--------------------------------------------------------------------------
@@ -57,11 +54,11 @@ return [
     |
     */
 
-    'new_user_roles' => [
-        //
-    ],
+  "new_user_roles" => [
+    //
+  ],
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | New User Groups
     |--------------------------------------------------------------------------
@@ -71,11 +68,11 @@ return [
     |
     */
 
-    'new_user_groups' => [
-        //
-    ],
+  "new_user_groups" => [
+    //
+  ],
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | User Wizard Invitation Email
     |--------------------------------------------------------------------------
@@ -87,9 +84,9 @@ return [
     |
     */
 
-    'wizard_invitation' => true,
+  "wizard_invitation" => true,
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Password Brokers
     |--------------------------------------------------------------------------
@@ -100,12 +97,12 @@ return [
     |
     */
 
-    'passwords' => [
-        'resets' => 'resets',
-        'activations' => 'activations',
-    ],
+  "passwords" => [
+    "resets" => "resets",
+    "activations" => "activations",
+  ],
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Database
     |--------------------------------------------------------------------------
@@ -114,15 +111,15 @@ return [
     |
     */
 
-    'database' => config('database.default'),
+  "database" => config("database.default"),
 
-    'tables' => [
-        'users' => 'users',
-        'role_user' => 'role_user',
-        'group_user' => 'group_user',
-    ],
+  "tables" => [
+    "users" => "users",
+    "role_user" => "role_user",
+    "group_user" => "group_user",
+  ],
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Authentication Guards
     |--------------------------------------------------------------------------
@@ -133,12 +130,12 @@ return [
     |
     */
 
-    'guards' => [
-        'cp' => 'web',
-        'web' => 'web',
-    ],
+  "guards" => [
+    "cp" => "web",
+    "web" => "web",
+  ],
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Impersonation
     |--------------------------------------------------------------------------
@@ -148,12 +145,12 @@ return [
     |
     */
 
-    'impersonate' => [
-        'enabled' => env('STATAMIC_IMPERSONATE_ENABLED', true),
-        'redirect' => env('STATAMIC_IMPERSONATE_REDIRECT', null),
-    ],
+  "impersonate" => [
+    "enabled" => env("STATAMIC_IMPERSONATE_ENABLED", true),
+    "redirect" => env("STATAMIC_IMPERSONATE_REDIRECT", null),
+  ],
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Default Sorting
     |--------------------------------------------------------------------------
@@ -162,7 +159,6 @@ return [
     |
     */
 
-    'sort_field' => 'email',
-    'sort_direction' => 'asc',
-
+  "sort_field" => "email",
+  "sort_direction" => "asc",
 ];

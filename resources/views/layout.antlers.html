@@ -1,65 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ site:short_locale }}" class="h-full">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>{{ title ?? site:name }}</title>
-        <meta
-            name="description"
-            content="Relieve foot and ankle pain with Dr. Nooreen Ibrahim, a leading podiatrist serving Highland Park, Deerfield, Northbrook, Highwood, and Northfield, IL."
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/apple-touch-icon.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="/favicon-32x32.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-        <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="theme-color" content="#ffffff" />
-        {{ vite src="resources/js/site.js|resources/css/site.css" }}
-    </head>
-    <!-- Google tag (gtag.js) -->
-    <script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-J68CMFS8R1"
-    ></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag("js", new Date());
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ title ?? site:name }}</title>
+    <meta
+      name="description"
+      content="Relieve foot and ankle pain with Dr. Nooreen Ibrahim, a leading podiatrist serving Highland Park, Deerfield, Northbrook, Highwood, and Northfield, IL."
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    {{ vite src="resources/js/site.js|resources/css/site.css" }}
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J68CMFS8R1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-        gtag("config", "G-J68CMFS8R1");
-    </script>
-    <!-- Google tag (gtag.js) -->
-    <body
-        x-data="{ mobileMenuToggle: false }"
-        :class="mobileMenuToggle ? 'overflow-y-hidden' : ''"
-        class="grid min-h-[100dvh] grid-flow-row bg-gray-100 font-body leading-normal text-gray-800"
-    >
-        {{ partial:nav }}
-        <div
-            aria-hidden="true"
-            x-cloak
-            class="!bg-black fixed w-screen h-[100dvh] z-10 opacity-80"
-            x-show="mobileMenuToggle"
-        ></div>
-        <main>{{ template_content }}</main>
-        {{ partial:footer }}
-    </body>
+    gtag("config", "G-J68CMFS8R1");
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <body
+    x-data="{ mobileMenuToggle: false }"
+    :class="mobileMenuToggle ? 'overflow-y-hidden' : ''"
+    class="font-body grid min-h-[100dvh] grid-flow-row bg-gray-100 leading-normal text-gray-800"
+  >
+    {{ partial:nav }}
+    <div aria-hidden="true" x-cloak class="fixed z-10 h-[100dvh] w-screen !bg-black opacity-80" x-show="mobileMenuToggle"></div>
+    <main>{{ template_content }}</main>
+    {{ partial:footer }}
+  </body>
 </html>
