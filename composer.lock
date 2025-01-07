@@ -4764,16 +4764,16 @@
     },
     {
       "name": "statamic/cms",
-      "version": "v5.23.0",
+      "version": "v5.40.0",
       "source": {
         "type": "git",
         "url": "https://github.com/statamic/cms.git",
-        "reference": "513bc966b28ab41925c1961c58ef639eb8fb72a6"
+        "reference": "2cb135cf7a09af927b12b15ce3538bdc99622438"
       },
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/statamic/cms/zipball/513bc966b28ab41925c1961c58ef639eb8fb72a6",
-        "reference": "513bc966b28ab41925c1961c58ef639eb8fb72a6",
+        "url": "https://api.github.com/repos/statamic/cms/zipball/2cb135cf7a09af927b12b15ce3538bdc99622438",
+        "reference": "2cb135cf7a09af927b12b15ce3538bdc99622438",
         "shasum": ""
       },
       "require": {
@@ -4794,8 +4794,9 @@
         "rebing/graphql-laravel": "^9.5",
         "rhukster/dom-sanitizer": "^1.0.6",
         "spatie/blink": "^1.3",
-        "spatie/ignition": "^1.12",
+        "spatie/ignition": "^1.15",
         "statamic/stringy": "^3.1.2",
+        "stillat/blade-parser": "^1.10.1",
         "symfony/lock": "^6.4",
         "symfony/var-exporter": "^6.0",
         "symfony/yaml": "^6.0 || ^7.0",
@@ -4815,6 +4816,14 @@
       },
       "type": "library",
       "extra": {
+        "laravel": {
+          "aliases": {
+            "Statamic": "Statamic\\Statamic"
+          },
+          "providers": [
+            "Statamic\\Providers\\StatamicServiceProvider"
+          ]
+        },
         "download-dist": [
           {
             "url": "https://github.com/statamic/cms/releases/download/{$version}/dist.tar.gz",
@@ -4824,20 +4833,13 @@
             "url": "https://github.com/statamic/cms/releases/download/{$version}/dist-frontend.tar.gz",
             "path": "resources/dist-frontend"
           }
-        ],
-        "laravel": {
-          "providers": [
-            "Statamic\\Providers\\StatamicServiceProvider"
-          ],
-          "aliases": {
-            "Statamic": "Statamic\\Statamic"
-          }
-        }
+        ]
       },
       "autoload": {
         "files": [
           "src/helpers.php",
-          "src/namespaced_helpers.php"
+          "src/namespaced_helpers.php",
+          "src/View/Blade/helpers.php"
         ],
         "psr-4": {
           "Statamic\\": "src/"
@@ -4856,7 +4858,7 @@
       ],
       "support": {
         "issues": "https://github.com/statamic/cms/issues",
-        "source": "https://github.com/statamic/cms/tree/v5.23.0"
+        "source": "https://github.com/statamic/cms/tree/v5.40.0"
       },
       "funding": [
         {
@@ -4864,7 +4866,7 @@
           "type": "github"
         }
       ],
-      "time": "2024-08-21T21:19:36+00:00"
+      "time": "2024-11-26T22:16:39+00:00"
     },
     {
       "name": "statamic/seo-pro",
@@ -4978,6 +4980,60 @@
         "source": "https://github.com/statamic/Stringy"
       },
       "time": "2022-05-04T18:41:52+00:00"
+    },
+    {
+      "name": "stillat/blade-parser",
+      "version": "v1.10.2",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/Stillat/blade-parser.git",
+        "reference": "959cdda611e7819f9db8a49d91c7d963d702fbd4"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/Stillat/blade-parser/zipball/959cdda611e7819f9db8a49d91c7d963d702fbd4",
+        "reference": "959cdda611e7819f9db8a49d91c7d963d702fbd4",
+        "shasum": ""
+      },
+      "require": {
+        "laravel/framework": "^9.36 || ^10.0  || ^11.0",
+        "php": "^8.1.0"
+      },
+      "require-dev": {
+        "brianium/paratest": "*",
+        "laravel/pint": "^1.4",
+        "orchestra/testbench": "*",
+        "pestphp/pest": "^2"
+      },
+      "type": "library",
+      "extra": {
+        "laravel": {
+          "providers": [
+            "Stillat\\BladeParser\\ServiceProvider",
+            "Stillat\\BladeParser\\Providers\\ValidatorServiceProvider"
+          ]
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "Stillat\\BladeParser\\": "src"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "support": {
+        "issues": "https://github.com/Stillat/blade-parser/issues",
+        "source": "https://github.com/Stillat/blade-parser/tree/v1.10.2"
+      },
+      "funding": [
+        {
+          "url": "https://github.com/johnathonkoster",
+          "type": "github"
+        }
+      ],
+      "time": "2024-11-27T20:25:52+00:00"
     },
     {
       "name": "symfony/console",
