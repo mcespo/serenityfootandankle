@@ -3,9 +3,9 @@ id: 98a4bb3a-1fde-4d5c-9073-d203f6132b3f
 blueprint: page
 title: 'KERYFLEX – Nail Restoration System'
 image:
-  src: pages/photo-2_after.jpg
+  src: pages/image-01.jpg
 updated_by: 06b22383-0ba2-4c31-a8de-ab3b25c4bf61
-updated_at: 1736229542
+updated_at: 1736230959
 content:
   -
     type: paragraph
