@@ -34,11 +34,11 @@
           {{ content }}
         {{ else }}
           {{ if video_placement == 'Top' }}
-            {{ partial:video video_link="video_link" }}
+            {{ partial:video video_link="{video_link}" }}
           {{ /if }}
           {{ content }}
           {{ if video_placement == 'Bottom' }}
-            {{ partial:video video_link="video_link" }}
+            {{ partial:video video_link="{video_link}" }}
           {{ /if }}
         {{ /unless }}
       </article>
