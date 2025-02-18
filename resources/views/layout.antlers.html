@@ -31,6 +31,7 @@
         })(window, document, "script", "dataLayer", "GTM-K92B7BDH");
       </script>
       <!-- End Google Tag Manager -->
+      <!-- GA -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-J68CMFS8R1"></script>
       <script>
         window.dataLayer = window.dataLayer || [];
@@ -41,6 +42,7 @@
 
         gtag("config", "G-J68CMFS8R1");
       </script>
+      <!-- End GA -->
     {{ /if }}
     {{ vite src="resources/js/site.js|resources/css/site.css" }}
   </head>
@@ -49,18 +51,18 @@
     :class="mobileMenuToggle ? 'overflow-y-hidden' : ''"
     class="font-body grid min-h-[100dvh] grid-flow-row bg-gray-100 leading-normal text-gray-800"
   >
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-      {{ if environment == 'production' }}
+    {{ if environment == 'production' }}
+      <!-- Google Tag Manager (noscript) -->
+      <noscript>
         <iframe
           src="https://www.googletagmanager.com/ns.html?id=GTM-K92B7BDH"
           height="0"
           width="0"
           style="display: none; visibility: hidden"
         ></iframe>
-      {{ /if }}
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
+      </noscript>
+      <!-- End Google Tag Manager (noscript) -->
+    {{ /if }}
     {{ partial:nav }}
     <div aria-hidden="true" x-cloak class="fixed z-10 h-[100dvh] w-screen !bg-black opacity-80" x-show="mobileMenuToggle"></div>
     <main>{{ template_content }}</main>
