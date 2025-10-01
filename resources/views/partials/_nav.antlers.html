@@ -9,64 +9,105 @@ mobile_classes:
 ---
 
 <nav class="sticky top-0 z-30 bg-inherit shadow">
+  <div class="grid items-center justify-center gap-x-6 bg-red-800 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
+    <p class="text-sm font-bold uppercase text-white">Serenity Foot and Ankle Specialists is closed until further notice</p>
+  </div>
   <div class="mx-auto my-3 max-w-7xl px-2 sm:px-4 lg:px-8">
     <div class="flex h-16 items-center justify-between">
       <div class="flex items-center px-2 lg:px-0">
         <h1 class="sr-only">Serenity foot and Ankle</h1>
-        <a href="/" class="flex flex-shrink-0 items-center">{{ svg src="img/serenity-foot-and-ankle-logo" class="h-14
-          w-auto" }}</a>
-        <div class="hidden h-min items-baseline lg:flex lg:ml-4 lg:gap-x-2 xl:ml-6 xl:gap-x-6">
+        <a href="/" class="flex flex-shrink-0 items-center">
+          {{ svg src="img/serenity-foot-and-ankle-logo" class="h-14 w-auto" }}
+        </a>
+        <div class="hidden h-min items-baseline lg:ml-4 lg:flex lg:gap-x-2 xl:ml-6 xl:gap-x-6">
           {{ nav:main_nav include_home="true" max_depth="3" }}
-          {{ unless children }}
-          {{ if remove_from_navigation == false }}
-          <a href="{{ url }}"
-            class="{{ is_current ? 'border-gray-700 text-gray-900' : 'border-transparent hover:border-teal-serenity' }} inline-flex items-center border-b-2 pt-1 text-sm font-medium">
-            <p class="text-base font-medium text-gray-900">{{ title }}</p>
-          </a>
-          {{ /if }}
-          {{ else }}
-          <div x-data="{ {{ slug | camelize }}: false }" class="relative">
-            <button x-on:click="{{ slug | camelize }} = !{{ slug | camelize }}" type="button"
-              class="group {{ if depth == 2 }} -translate-x-[0.25rem] {{ /if }} inline-flex w-full items-center justify-between rounded-md p-1 text-base font-medium hover:ring-2 hover:ring-teal-serenity focus:outline-none"
-              aria-expanded="false">
-              <span>All {{ title }}</span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true" class="ml-2 w-[0.65rem] h-auto text-gray-900 group-hover:text-gray-500" viewBox="5 6.98 10.02 6.02">
-                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06z" clip-rule="evenodd"/>
-              </svg>
-            </button>
-            <div x-cloak x-show="{{ slug | camelize }}" @click.outside="{{ slug | camelize }} = false"
-              class="{{ view:nav_classes[depth] }} absolute z-30 -ml-4 mt-3 w-screen max-w-sm transform px-2 sm:px-0">
-              <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                  <a href="{{ url }}"
-                    class="{{ is_current ? 'border-gray-700 text-gray-900' : 'border-transparent hover:border-teal-serenity' }} inline-flex items-center border-b-2 pt-1 text-sm font-medium">
-                    <p class="text-base font-medium text-gray-900">
-                      {{ title }}
-                    </p>
-                  </a>
-                  {{ *recursive children* }}
+            {{ unless children }}
+              {{ if remove_from_navigation == false }}
+                <a
+                  href="{{ url }}"
+                  class="{{ is_current ? 'border-gray-700 text-gray-900' : 'border-transparent hover:border-teal-serenity' }} inline-flex items-center border-b-2 pt-1 text-sm font-medium"
+                >
+                  <p class="text-base font-medium text-gray-900">{{ title }}</p>
+                </a>
+              {{ /if }}
+            {{ else }}
+              <div x-data="{ {{ slug | camelize }}: false }" class="relative">
+                <button
+                  x-on:click="{{ slug | camelize }} = !{{ slug | camelize }}"
+                  type="button"
+                  class="{{ if depth == 2 }} -translate-x-[0.25rem] {{ /if }} group inline-flex w-full items-center justify-between rounded-md p-1 text-base font-medium hover:ring-2 hover:ring-teal-serenity focus:outline-none"
+                  aria-expanded="false"
+                >
+                  <span>All {{ title }}</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    class="ml-2 h-auto w-[0.65rem] text-gray-900 group-hover:text-gray-500"
+                    viewBox="5 6.98 10.02 6.02"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+                <div
+                  x-cloak
+                  x-show="{{ slug | camelize }}"
+                  @click.outside="{{ slug | camelize }} = false"
+                  class="{{ view:nav_classes[depth] }} absolute z-30 -ml-4 mt-3 w-screen max-w-sm transform px-2 sm:px-0"
+                >
+                  <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                    <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                      <a
+                        href="{{ url }}"
+                        class="{{ is_current ? 'border-gray-700 text-gray-900' : 'border-transparent hover:border-teal-serenity' }} inline-flex items-center border-b-2 pt-1 text-sm font-medium"
+                      >
+                        <p class="text-base font-medium text-gray-900">
+                          {{ title }}
+                        </p>
+                      </a>
+                      {{ *recursive children* }}
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          {{ /unless }}
+            {{ /unless }}
           {{ /nav:main_nav }}
         </div>
       </div>
       <p class="hidden text-center text-teal-serenity 3xs:block">
-        {{ business:phone }}
+        {{# {{ business:phone }} #}}
       </p>
       <div class="flex items-center lg:hidden">
-        <button x-on:click="mobileMenuToggle = !mobileMenuToggle" type="button"
+        <button
+          x-on:click="mobileMenuToggle = !mobileMenuToggle"
+          type="button"
           class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-          aria-controls="mobile-menu" aria-expanded="false">
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
           <span class="sr-only">Open main menu</span>
-          <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor" aria-hidden="true">
+          <svg
+            class="block h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
-          <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor" aria-hidden="true">
+          <svg
+            class="hidden h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
@@ -78,36 +119,46 @@ mobile_classes:
   <div class="lg:hidden" id="mobile-menu">
     <div x-cloak x-show="mobileMenuToggle" class="max-h-[80dvh] space-y-1 overflow-y-scroll pt-2">
       {{ nav:main_nav include_home="true" max_depth="3" }}
-      {{ unless children }}
-      {{ if remove_from_navigation == false }}
-      <a href="{{ url }}"
-        class="{{ view:mobile_classes[depth] }} {{ is_current ? 'cursor-default bg-indigo-100 !text-gray-900' : ' hover:bg-gray-50' }} !mt-0 block border-b-2 py-2 pr-3.5 text-sm font-bold uppercase leading-7">
-        {{ title }}
-      </a>
-      {{ /if }}
-      {{ else }}
-      <div class="!mt-0" x-data="{ {{ slug | camelize }}: false }">
-        <button x-on:click="{{ slug | camelize }} = !{{ slug | camelize }}" type="button"
-          class="{{ view:mobile_classes[depth] }} flex w-full items-center justify-between border-b-2 py-2 pr-3.5 text-sm font-semibold uppercase leading-7 hover:bg-gray-50"
-          aria-controls="disclosure-1" aria-expanded="false">
-          All {{ title }}
+        {{ unless children }}
+          {{ if remove_from_navigation == false }}
+            <a
+              href="{{ url }}"
+              class="{{ view:mobile_classes[depth] }} {{ is_current ? 'cursor-default bg-indigo-100 !text-gray-900' : ' hover:bg-gray-50' }} !mt-0 block border-b-2 py-2 pr-3.5 text-sm font-bold uppercase leading-7"
+            >
+              {{ title }}
+            </a>
+          {{ /if }}
+        {{ else }}
+          <div class="!mt-0" x-data="{ {{ slug | camelize }}: false }">
+            <button
+              x-on:click="{{ slug | camelize }} = !{{ slug | camelize }}"
+              type="button"
+              class="{{ view:mobile_classes[depth] }} flex w-full items-center justify-between border-b-2 py-2 pr-3.5 text-sm font-semibold uppercase leading-7 hover:bg-gray-50"
+              aria-controls="disclosure-1"
+              aria-expanded="false"
+            >
+              All {{ title }}
 
-          <!-- Expand/collapse icon, toggle classes based on menu open state. Open: "rotate-180", Closed: "" -->
-          <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd"
-              d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-              clip-rule="evenodd" />
-          </svg>
-        </button>
-        <div class="space-y-2 bg-gray-200" id="disclosure-1" x-cloak x-show="{{ slug | camelize }}">
-          <a href="{{ url }}"
-            class="{{ view:mobile_classes[depth] }} !mt-0 block py-2 pl-4 pr-3 text-sm font-semibold uppercase leading-7 text-teal-serenity hover:bg-gray-50">
-            {{ title }}
-          </a>
-          {{ *recursive children* }}
-        </div>
-      </div>
-      {{ /unless }}
+              <!-- Expand/collapse icon, toggle classes based on menu open state. Open: "rotate-180", Closed: "" -->
+              <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path
+                  fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+            <div class="space-y-2 bg-gray-200" id="disclosure-1" x-cloak x-show="{{ slug | camelize }}">
+              <a
+                href="{{ url }}"
+                class="{{ view:mobile_classes[depth] }} !mt-0 block py-2 pl-4 pr-3 text-sm font-semibold uppercase leading-7 text-teal-serenity hover:bg-gray-50"
+              >
+                {{ title }}
+              </a>
+              {{ *recursive children* }}
+            </div>
+          </div>
+        {{ /unless }}
       {{ /nav:main_nav }}
     </div>
   </div>

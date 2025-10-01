@@ -32,16 +32,32 @@
       <div class="relative order-last lg:col-span-5">
         {{ partial:svg-bg-pattern }}
         <aside class="-ml-12 -mt-12 grid gap-6 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
-          {{ repeater }}
-            {{ unless image:src == '' }}
-              {{ responsive:image quality:webp="50" md:quality:webp="75" md:quality:webp="75" }}
-            {{ /unless }}
-          {{ /repeater }}
+          {{#
+            {{ repeater }}
+              {{ unless image:src == '' }}
+                {{ responsive:image quality:webp="50" md:quality:webp="75" md:quality:webp="75" }}
+              {{ /unless }}
+            {{ /repeater }}
+          #}}
         </aside>
       </div>
       <article class="prose max-w-xl text-base leading-7 text-gray-700 lg:col-span-7">
-        {{ map_url }}
-        {{ content }}
+        <div class="grid items-center justify-center gap-x-6 bg-red-800 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
+          <p class="text-sm/6 text-white">
+            After much consideration, I have made the difficult decision to close my practice. I want to express my deepest thanks for the
+            privilege of being your podiatrist.
+          </p>
+
+          <p class="text-sm/6 text-white">
+            I am so grateful for the trust you've placed in me. Helping you get back to the activities you love has been one of the most
+            meaningful parts of my career. I truly value the relationships we've built. I look forward to the next chapter and hope our
+            paths cross again in the future.
+          </p>
+        </div>
+        {{#
+          {{ map_url }}
+          {{ content }}
+        #}}
       </article>
     </div>
   </div>
