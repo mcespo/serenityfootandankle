@@ -16,6 +16,7 @@
     "laravel/tinker": "^2.8",
     "rias/statamic-redirect": "^3.7",
     "spatie/statamic-responsive-images": "^5.0",
+    "statamic/cli": "^3.6",
     "statamic/cms": "^5.7",
     "statamic/seo-pro": "^6.0"
   },
